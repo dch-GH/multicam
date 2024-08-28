@@ -193,15 +193,6 @@
       "Flags": 0,
       "Name": "GameObject",
       "Enabled": true
-    },
-    {
-      "__guid": "410bb33d-967b-4744-81a1-71132c114fdf",
-      "Flags": 0,
-      "Name": "GameObject (1)",
-      "Position": "929.2128,267.5088,890",
-      "Enabled": true,
-      "__Prefab": "guard.prefab",
-      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

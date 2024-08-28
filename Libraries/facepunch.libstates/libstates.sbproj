@@ -1,8 +1,8 @@
 {
-  "Title": "playercontroller",
+  "Title": "State Machines",
   "Type": "library",
   "Org": "facepunch",
-  "Ident": "playercontroller",
+  "Ident": "libstates",
   "Schema": 1,
   "IncludeSourceFiles": false,
   "Resources": null,
@@ -12,10 +12,11 @@
   "Metadata": {
     "CsProjName": "",
     "Compiler": {
-      "RootNamespace": "Sandbox",
+      "RootNamespace": "Sandbox.States",
       "DefineConstants": "SANDBOX;ADDON;DEBUG",
       "NoWarn": "1701;1702;1591;",
       "WarningsAsErrors": "",
+      "Nullables": true,
       "Whitelist": true,
       "AssemblyReferences": [],
       "IgnoreFolders": [],
