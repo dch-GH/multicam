@@ -1,0 +1,161 @@
+{
+  "RootObject": {
+    "Id": "2c6d6454-6f08-4d43-858b-5eec6d4c4791",
+    "Name": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__version": 0,
+        "__type": "CharacterController",
+        "__enabled": true,
+        "Acceleration": 32,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "trigger",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__version": 0,
+        "__type": "PlayerController",
+        "__enabled": true,
+        "AnimationHelper": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
+        "CharacterController": "2c6d6454-6f08-4d43-858b-5eec6d4c4791",
+        "CrouchMoveSpeed": 64,
+        "RunMoveSpeed": 190,
+        "SprintMoveSpeed": 320,
+        "WalkMoveSpeed": 110
+      }
+    ],
+    "Children": [
+      {
+        "Id": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
+        "Name": "Player Body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "SkinnedModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 341,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "ShadowsOnly",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__version": 0,
+            "__type": "CitizenAnimationHelper",
+            "__enabled": true,
+            "BodyWeight": 1,
+            "EyeSource": null,
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "IkLeftFoot": null,
+            "IkLeftHand": null,
+            "IkRightFoot": null,
+            "IkRightHand": null,
+            "LookAt": null,
+            "LookAtEnabled": false,
+            "Target": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8"
+          },
+          {
+            "__version": 0,
+            "__type": "PlayerDresser",
+            "__enabled": true,
+            "BodyRenderer": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8"
+          },
+          {
+            "__version": 0,
+            "__type": "PlayerFootsteps",
+            "__enabled": true,
+            "Source": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8"
+          }
+        ]
+      },
+      {
+        "Id": "95477550-0a10-434c-a33f-da8fea48e91b",
+        "Name": "Physics Pusher",
+        "Position": "0,0,22.68671",
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "BoxCollider",
+            "__enabled": true,
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "36,36,40",
+            "Static": false,
+            "Surface": null
+          }
+        ]
+      },
+      {
+        "Id": "10aa0a3b-77e3-4f4c-97e7-8ee7bc26895f",
+        "Name": "Voice",
+        "Position": "42.0599,39.05991,-23.23907",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "Voice",
+            "__enabled": true,
+            "Loopback": false,
+            "Mode": "PushToTalk",
+            "MorphScale": 2,
+            "MorphSmoothTime": 0.1,
+            "PushToTalkInput": "voice",
+            "Renderer": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
+            "Volume": 1,
+            "WorldspacePlayback": true
+          }
+        ]
+      },
+      {
+        "Id": "b54de67a-8348-4473-a163-b630f43b0534",
+        "Name": "World",
+        "Position": "0,0,77.72417",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "WorldPanel",
+            "__enabled": true,
+            "HorizontalAlign": "Center",
+            "LookAtCamera": true,
+            "PanelSize": "512,512",
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__version": 0,
+            "__type": "NameTagPanel",
+            "__enabled": true
+          }
+        ]
+      },
+      {
+        "Id": "4400351a-2ebc-41fc-8991-14b537cec521",
+        "Name": "Player Pusher",
+        "Position": "0,0,32",
+        "Enabled": true,
+        "Components": [
+          {
+            "__version": 0,
+            "__type": "PlayerPusher",
+            "__enabled": true,
+            "Radius": 32
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
