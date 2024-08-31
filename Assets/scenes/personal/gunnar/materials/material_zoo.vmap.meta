@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "material_zoo",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "material_zoo",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "scenes/personal/gunnar/materials/material_zoo.vmap"
+      }
+    }
+  }
+}
