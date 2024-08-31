@@ -4,11 +4,13 @@
 
 <root>
 	<div class="texture" @ref=_img></div>
+	<div class="text">@($"In Shadow: {InShadow}")</div>
 </root>
 
 @code
 {
 	public static Panel _img;
+	public static bool InShadow;
 
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt

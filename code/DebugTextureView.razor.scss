@@ -18,10 +18,20 @@ DebugTextureView {
     .texture {
         border: 2px solid white;
         background-color: red;
-        min-width: 512px;
-        min-height: 512px;
+        // min-width: 512px;
+        // min-height: 512px;
+        max-width: 512px;
+        max-height: 512px;
         left: 0;
         top: 0;
         position: absolute;
+    }
+
+    .text {
+        font-size: 32px;
+        left: 0;
+        position: absolute;
+        color: white;
+        text-stroke: 2px black;
     }
 }

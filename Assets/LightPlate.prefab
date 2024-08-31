@@ -1,0 +1,59 @@
+{
+  "RootObject": {
+    "__guid": "4ceab2c7-af8a-49e2-b188-45422056647e",
+    "Flags": 0,
+    "Name": "lightplate",
+    "Scale": "0.2,0.2,1",
+    "Tags": "lightplate",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "9cce0384-f85f-4b1b-aa29-46a5a5976a13",
+        "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/default/white.vmat",
+        "Model": "models/dev/plane.vmdl",
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "62a139c7-9ce1-485c-8204-934427d44710",
+        "Flags": 0,
+        "Name": "LightDetectionCamera",
+        "Position": "0,0,15",
+        "Rotation": "0,0.7071068,0,0.7071068",
+        "Scale": "5,5,1",
+        "Tags": "maincamera",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.CameraComponent",
+            "__guid": "04fa8ac2-d02c-4cb8-bdd8-fd66981cee8d",
+            "BackgroundColor": "0,0,0,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": false,
+            "Orthographic": true,
+            "OrthographicHeight": 4,
+            "Priority": 1,
+            "RenderExcludeTags": "player_body",
+            "RenderTags": "lightplate,light",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 19,
+            "ZNear": 1
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

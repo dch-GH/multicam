@@ -2,52 +2,37 @@ namespace Ironsim;
 
 public sealed class LightDetector : Component
 {
-	[Property] private CameraComponent _mainCamera;
-	[Property] private CameraComponent _lightcamera;
+	public bool IsInShadow { get; private set; }
+
+	[Property] private PrefabFile _lightPlatePrefab;
+	[Property] private Vector3 _offset;
 
 	[Property, Range( 0, 255 )]
 	private int _brightnessThreshold = 165;
+	private CameraComponent _lightcamera;
+	private GameObject _lightPlate;
 
-	public bool IsInShadow { get; private set; }
-
-	private HashSet<GameObject> _pointLights;
-	private bool _dirty;
-	private int _bufferTextureWidth = 1;
-	private int _bufferTextureHeight = 1;
+	private int _bufferTextureWidth = 2;
+	private int _bufferTextureHeight = 2;
 	private Color32[]? _buffer;
-	private RealTimeSince _sincePrint;
 
 	protected override void OnStart()
 	{
-		_pointLights = Scene.GetAllObjects( true ).Where( x => x.Components.TryGet<PointLight>( out var _ ) ).ToHashSet();
-		_lightcamera.AddHookBeforeOverlay( "lightDetection", 0, LightCameraRenderEffect );
+		_lightPlate = GameObject.Clone( _lightPlatePrefab );
+		_lightPlate.BreakFromPrefab();
+
+		_lightcamera = _lightPlate.Components.Get<CameraComponent>( FindMode.EverythingInSelfAndChildren );
+		_lightcamera.AddHookAfterOpaque( "lightDetection", int.MinValue, LightCameraRenderEffect );
 		_buffer = new Color32[_bufferTextureWidth * _bufferTextureHeight];
 	}
 
 	protected override void OnPreRender()
 	{
-		_dirty = false;
+		_lightPlate.Transform.Position = Transform.Position + _offset;
+		// _lightcamera.Transform.Rotation = Rotation.Identity;
 
-		// TODO: Find a better way to do this.
-		var nearestLight = _pointLights.OrderBy( x => Vector3.DistanceBetween( Transform.Position, x.Transform.Position ) ).First();
-
-		// TODO: With tags: solid, ignore things like glass or other non-light blockers.
-		// Also trace to corner of bounds + center. Do trace to center first, if blocked, early bail.
-		var tr = Scene.Trace.Ray( nearestLight.Transform.Position, Transform.Position ).IgnoreGameObjectHierarchy( nearestLight ).IgnoreGameObjectHierarchy( GameObject ).Run();
-
-		if ( tr.Hit )
-		{
-			// The player is probably in a shadow behind something like a wall or a prop.
-			_buffer = null;
-			IsInShadow = true;
-			return;
-		}
-
-		// Now we get the light camera's texture.
-		_dirty = true;
-
-		if ( _buffer is null )
-			return;
+		// Assume we aren't in shadows first.
+		IsInShadow = false;
 
 		for ( int i = 0; i < _buffer.Length; i++ )
 		{
@@ -57,23 +42,19 @@ public sealed class LightDetector : Component
 
 			var average = (col.r + col.g + col.b) / 3;
 			IsInShadow = average <= _brightnessThreshold;
+			DebugTextureView.InShadow = IsInShadow;
 		}
-
-		if ( _sincePrint >= 1 )
-			Log.Info( $"In shadows: {IsInShadow}" );
 	}
 
 	private void LightCameraRenderEffect( SceneCamera sc )
 	{
-		if ( !_dirty )
-			return;
-
 		if ( _buffer is null )
 			return;
 
 		var attr = new RenderAttributes();
 		Graphics.GrabFrameTexture( "ColorBuffer", renderAttributes: attr );
 		var texture = attr.GetTexture( "ColorBuffer" );
+
 		DebugTextureView._img.Style.BackgroundImage = texture;
 		DebugTextureView._img.Style.Width = texture.Width;
 		DebugTextureView._img.Style.Height = texture.Height;

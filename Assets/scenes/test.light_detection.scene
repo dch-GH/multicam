@@ -349,12 +349,6 @@
             "component_id": "0a19ab1f-20b1-410b-9d86-2c7b96a103e2",
             "go": "740b5ea6-db95-404d-b946-9a99a18ee920",
             "component_type": "CameraComponent"
-          },
-          "_mainCamera": {
-            "_type": "component",
-            "component_id": "b72b5182-2f4e-442f-8454-7f3f7760beac",
-            "go": "6efe9947-29dd-437e-a641-84ab43b7c91d",
-            "component_type": "CameraComponent"
           }
         }
       ],
@@ -392,27 +386,10 @@
           "Flags": 0,
           "Name": "LightPlane",
           "Position": "0,0,0",
-          "Scale": "0.2,0.2,0.05",
+          "Scale": "0.2,0.2,1",
           "Tags": "light_plate",
           "Enabled": true,
           "Components": [
-            {
-              "__type": "Ironsim.LightDetector",
-              "__guid": "335ade5d-2da0-4396-90d4-5210ecac526f",
-              "_brightnessThreshold": 165,
-              "_lightcamera": {
-                "_type": "component",
-                "component_id": "0a19ab1f-20b1-410b-9d86-2c7b96a103e2",
-                "go": "740b5ea6-db95-404d-b946-9a99a18ee920",
-                "component_type": "CameraComponent"
-              },
-              "_mainCamera": {
-                "_type": "component",
-                "component_id": "b72b5182-2f4e-442f-8454-7f3f7760beac",
-                "go": "6efe9947-29dd-437e-a641-84ab43b7c91d",
-                "component_type": "CameraComponent"
-              }
-            },
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "dca300b0-c0ed-4cb5-923e-5a03e769ac74",
