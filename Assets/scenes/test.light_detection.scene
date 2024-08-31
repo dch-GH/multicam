@@ -1,0 +1,456 @@
+{
+  "__guid": "da7eef9d-0efc-4ce2-a6e3-532c283bda7d",
+  "GameObjects": [
+    {
+      "__guid": "a350587f-7fd8-4eac-82b7-fedcb88e60a3",
+      "Flags": 0,
+      "Name": "Point Light",
+      "Position": "451.8707,983.162,234.5491",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "d021d609-b05a-4bdc-8921-918d9fe6cfe3",
+          "Attenuation": 1,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 735.19995,
+          "Shadows": true
+        }
+      ]
+    },
+    {
+      "__guid": "a03de3b7-9770-4c95-9a88-de65813914b1",
+      "Flags": 0,
+      "Name": "Box",
+      "Position": "724.8419,1112.275,64",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "ff0a4277-38a8-469c-a79f-409bf40128cb",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+            "Positions": [
+              "-735.0345,-757.7389,64",
+              "735.0345,-757.7389,64",
+              "735.0345,757.7389,64",
+              "-735.0345,757.7389,64",
+              "-735.0345,757.7389,-64",
+              "735.0345,757.7389,-64",
+              "735.0345,-757.7389,-64",
+              "-735.0345,-757.7389,-64"
+            ],
+            "TextureCoord": [
+              "5.742457,5.919835",
+              "-5.742457,-0.5",
+              "5.742457,-5.919835",
+              "-5.919835,-0.5",
+              "-5.742457,-5.919835",
+              "-5.742457,-0.5",
+              "-5.742457,5.919835",
+              "-5.919835,-0.5",
+              "5.742457,-5.919835",
+              "5.742457,0.5",
+              "5.742457,5.919835",
+              "5.919835,0.5",
+              "-5.742457,5.919835",
+              "5.742457,0.5",
+              "-5.742457,-5.919835",
+              "5.919835,0.5",
+              "5.919835,-0.5",
+              "-5.742457,0.5",
+              "-5.919835,0.5",
+              "5.742457,-0.5",
+              "-5.919835,0.5",
+              "5.742457,-0.5",
+              "5.919835,-0.5",
+              "-5.742457,0.5"
+            ],
+            "TextureUAxis": [
+              "1,0,0",
+              "1,0,-0",
+              "0,-1,0",
+              "0,1,0",
+              "-1,0,0",
+              "1,-0,0"
+            ],
+            "TextureVAxis": [
+              "0,-1,0",
+              "0,-1,0",
+              "0,0,-1",
+              "-0,0,-1",
+              "0,0,-1",
+              "-0,0,-1"
+            ],
+            "TextureScale": [
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25"
+            ],
+            "TextureOffset": [
+              "172.6323,353.1001",
+              "172.6323,353.1001",
+              "353.1001,256",
+              "158.8999,256",
+              "339.3674,256",
+              "172.6326,256"
+            ],
+            "MaterialIndex": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "9cd82a35-e8ff-40e8-ba8d-3713a3d4e022",
+      "Flags": 0,
+      "Name": "Box",
+      "Position": "532.4134,1043.19,192.007",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "4a0bda25-1bb9-45e4-9c21-43cb4acc2598",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+            "Positions": [
+              "-26.06055,-12.68616,64",
+              "26.06055,-12.68616,64",
+              "26.06055,12.68616,64",
+              "-26.06055,12.68616,64",
+              "-26.06055,12.68616,-64",
+              "26.06055,12.68616,-64",
+              "26.06055,-12.68616,-64",
+              "-26.06055,-12.68616,-64"
+            ],
+            "TextureCoord": [
+              "0.203598,0.0991106",
+              "-0.203598,-0.5",
+              "0.203598,-0.0991106",
+              "-0.0991106,-0.5",
+              "-0.203598,-0.0991106",
+              "-0.203598,-0.5",
+              "-0.203598,0.0991106",
+              "-0.0991106,-0.5",
+              "0.203598,-0.0991106",
+              "0.203598,0.5",
+              "0.203598,0.0991106",
+              "0.0991106,0.5",
+              "-0.203598,0.0991106",
+              "0.203598,0.5",
+              "-0.203598,-0.0991106",
+              "0.0991106,0.5",
+              "0.0991106,-0.5",
+              "-0.203598,0.5",
+              "-0.0991106,0.5",
+              "0.203598,-0.5",
+              "-0.0991106,0.5",
+              "0.203598,-0.5",
+              "0.0991106,-0.5",
+              "-0.203598,0.5"
+            ],
+            "TextureUAxis": [
+              "1,0,0",
+              "1,0,-0",
+              "0,-1,0",
+              "0,1,0",
+              "-1,0,0",
+              "1,-0,0"
+            ],
+            "TextureVAxis": [
+              "0,-1,0",
+              "0,-1,0",
+              "0,0,-1",
+              "-0,0,-1",
+              "0,0,-1",
+              "-0,0,-1"
+            ],
+            "TextureScale": [
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25"
+            ],
+            "TextureOffset": [
+              "430.3467,76.75977",
+              "430.3467,76.75977",
+              "76.75977,256.028",
+              "435.2402,256.028",
+              "81.65334,256.028",
+              "430.3467,256.028"
+            ],
+            "MaterialIndex": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "6efe9947-29dd-437e-a641-84ab43b7c91d",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "0,1026.221,200.0354",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "b72b5182-2f4e-442f-8454-7f3f7760beac",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 16,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "2c400825-fc37-45e2-ae0e-b5d048cf37a3",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "588.0983,1053.537,90.82533",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "bde1739e-703e-4de3-a122-90bd920aeb0a",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "ZIndex": 100
+        },
+        {
+          "__type": "DebugTextureView",
+          "__guid": "1ac9025b-a6c8-43db-af83-11285303201b"
+        }
+      ]
+    },
+    {
+      "__guid": "f15579f6-5e3e-4316-9167-92f01260bd37",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "394.3637,969.3288,134.467",
+      "Tags": "player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "e42b3501-9e78-4b56-ab3a-0ed8761bedca",
+          "Center": "0,0,26.09999",
+          "IsTrigger": false,
+          "Scale": "32,32,64",
+          "Static": false
+        },
+        {
+          "__type": "Ironsim.LightDetector",
+          "__guid": "79e0d1b7-7afd-48dd-a7fb-77659948c143",
+          "_brightnessThreshold": 65,
+          "_lightcamera": {
+            "_type": "component",
+            "component_id": "0a19ab1f-20b1-410b-9d86-2c7b96a103e2",
+            "go": "740b5ea6-db95-404d-b946-9a99a18ee920",
+            "component_type": "CameraComponent"
+          },
+          "_mainCamera": {
+            "_type": "component",
+            "component_id": "b72b5182-2f4e-442f-8454-7f3f7760beac",
+            "go": "6efe9947-29dd-437e-a641-84ab43b7c91d",
+            "component_type": "CameraComponent"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "740b5ea6-db95-404d-b946-9a99a18ee920",
+          "Flags": 0,
+          "Name": "LightDetectionCamera",
+          "Position": "0,0,16",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "maincamera",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "0a19ab1f-20b1-410b-9d86-2c7b96a103e2",
+              "BackgroundColor": "0,0,0,1",
+              "ClearFlags": "All",
+              "FieldOfView": 60,
+              "IsMainCamera": false,
+              "Orthographic": true,
+              "OrthographicHeight": 16,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "light,player",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
+            }
+          ]
+        },
+        {
+          "__guid": "379743bf-4a95-43b1-bfdb-140607f299d8",
+          "Flags": 0,
+          "Name": "LightPlane",
+          "Position": "0,0,0",
+          "Scale": "0.2,0.2,0.05",
+          "Tags": "light_plate",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.LightDetector",
+              "__guid": "335ade5d-2da0-4396-90d4-5210ecac526f",
+              "_brightnessThreshold": 165,
+              "_lightcamera": {
+                "_type": "component",
+                "component_id": "0a19ab1f-20b1-410b-9d86-2c7b96a103e2",
+                "go": "740b5ea6-db95-404d-b946-9a99a18ee920",
+                "component_type": "CameraComponent"
+              },
+              "_mainCamera": {
+                "_type": "component",
+                "component_id": "b72b5182-2f4e-442f-8454-7f3f7760beac",
+                "go": "6efe9947-29dd-437e-a641-84ab43b7c91d",
+                "component_type": "CameraComponent"
+              }
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "dca300b0-c0ed-4cb5-923e-5a03e769ac74",
+              "BodyGroups": 18446744073709551615,
+              "MaterialOverride": "materials/default/white.vmat",
+              "Model": "models/dev/plane.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "test.light_detection",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
