@@ -1,0 +1,42 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root class="stamina-bar-container">
+    <div class="stamina-bar" style="width: @StaminaPercentage%;"></div>
+</root>
+
+<style>
+    .stamina-bar-container {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 200px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .stamina-bar {
+        height: 100%;
+        background-color: white;
+    }
+</style>
+
+@code
+{
+    [Property] public float MaxStamina { get; set; } = 100f;
+    [Property] public float CurrentStamina { get; set; } = 100f;
+
+    // Calculate the percentage of stamina remaining for the UI
+    public float StaminaPercentage => (CurrentStamina / MaxStamina) * 100;
+
+    // This method forces the UI to update when stamina changes
+    public void UpdateStamina(float newStamina)
+    {
+        CurrentStamina = newStamina;
+        StateHasChanged(); // Force the UI to rebuild on stamina update
+    }
+
+    // This method helps in rebuilding the UI only when state changes
+    protected override int BuildHash() => System.HashCode.Combine(MaxStamina, CurrentStamina);
+}
