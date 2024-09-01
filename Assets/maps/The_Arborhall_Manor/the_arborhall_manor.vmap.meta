@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "the_arborhall_manor",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "the_arborhall_manor",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/the_arborhall_manor/the_arborhall_manor.vmap"
+      }
+    }
+  }
+}
