@@ -38,11 +38,24 @@
         "WalkMoveSpeed": 110
       },
       {
+        "__type": "Ironsim.Player",
+        "__guid": "3a269073-676f-4862-a753-3439b7f1fa5b"
+      },
+      {
         "__type": "Ironsim.LightDetector",
         "__guid": "ed5c5e33-e117-45e4-8bcd-7297a0eee7cb",
         "_brightnessThreshold": 65,
+        "_debug": false,
         "_lightPlatePrefab": "lightplate.prefab",
         "_offset": "0,0,4"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "98e3874a-ba30-4493-aefe-360745192e21",
+        "Center": "0,0,31.2",
+        "IsTrigger": true,
+        "Scale": "25,25,60.5",
+        "Static": false
       }
     ],
     "Children": [

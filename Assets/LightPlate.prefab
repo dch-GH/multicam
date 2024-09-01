@@ -21,18 +21,17 @@
       {
         "__guid": "62a139c7-9ce1-485c-8204-934427d44710",
         "Flags": 0,
-        "Name": "LightDetectionCamera",
+        "Name": "Camera 2",
         "Position": "0,0,15",
         "Rotation": "0,0.7071068,0,0.7071068",
         "Scale": "5,5,1",
-        "Tags": "maincamera",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.CameraComponent",
             "__guid": "04fa8ac2-d02c-4cb8-bdd8-fd66981cee8d",
             "BackgroundColor": "0,0,0,1",
-            "ClearFlags": "All",
+            "ClearFlags": "Color, Stencil",
             "FieldOfView": 60,
             "IsMainCamera": false,
             "Orthographic": true,
