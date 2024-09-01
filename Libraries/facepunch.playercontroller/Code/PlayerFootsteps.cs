@@ -1,48 +1,69 @@
-
 public sealed class PlayerFootsteps : Component
 {
-	[Property] SkinnedModelRenderer Source { get; set; }
+    [Property] SkinnedModelRenderer Source { get; set; }
 
-	protected override void OnEnabled()
-	{
-		if ( Source is null )
-			return;
+    private PlayerController playerController;
 
-		Source.OnFootstepEvent += OnEvent;
-	}
+    protected override void OnEnabled()
+    {
+        if (Source is null)
+            return;
 
-	protected override void OnDisabled()
-	{
-		if ( Source is null )
-			return;
+        Source.OnFootstepEvent += OnEvent;
 
-		Source.OnFootstepEvent -= OnEvent;
-	}
+        // Get the PlayerController reference
+        playerController = this.Components.Get<PlayerController>();
+    }
 
-	TimeSince timeSinceStep;
+    protected override void OnDisabled()
+    {
+        if (Source is null)
+            return;
 
-	private void OnEvent( SceneModel.FootstepEvent e )
-	{
-		if ( timeSinceStep < 0.2f )
-			return;
+        Source.OnFootstepEvent -= OnEvent;
+    }
 
-		var tr = Scene.Trace
-			.Ray( e.Transform.Position + Vector3.Up * 20, e.Transform.Position + Vector3.Up * -20 )
-			.Run();
+    TimeSince timeSinceStep;
 
-		if ( !tr.Hit )
-			return;
+    private void OnEvent(SceneModel.FootstepEvent e)
+    {
+        // If the player is sliding, don't play footstep sounds
+        if (playerController != null && playerController.isSliding)
+        {
+            // Play slide sound only once when the slide starts
+            if (timeSinceStep > 1.0f)
+            {
+                PlaySlideSound();
+                timeSinceStep = 0;
+            }
+            return;
+        }
 
-		if ( tr.Surface is null )
-			return;
+        if (timeSinceStep < 0.2f)
+            return;
 
-		timeSinceStep = 0;
+        var tr = Scene.Trace
+            .Ray(e.Transform.Position + Vector3.Up * 20, e.Transform.Position + Vector3.Up * -20)
+            .Run();
 
-		var sound = e.FootId == 0 ? tr.Surface.Sounds.FootLeft : tr.Surface.Sounds.FootRight;
-		if ( sound is null ) return;
+        if (!tr.Hit)
+            return;
 
-		var handle = Sound.Play( sound, tr.HitPosition + tr.Normal * 5 );
-		handle.Volume *= e.Volume;
-		handle.Update();
-	}
+        if (tr.Surface is null)
+            return;
+
+        timeSinceStep = 0;
+
+        var sound = e.FootId == 0 ? tr.Surface.Sounds.FootLeft : tr.Surface.Sounds.FootRight;
+        if (sound is null) return;
+
+        var handle = Sound.Play(sound, tr.HitPosition + tr.Normal * 5);
+        handle.Volume *= e.Volume;
+        handle.Update();
+    }
+
+    private void PlaySlideSound()
+    {
+        Sound.Play("sound/slide.mp3");
+    }
 }

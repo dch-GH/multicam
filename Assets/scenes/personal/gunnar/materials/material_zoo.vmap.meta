@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "material_zoo",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "material_zoo",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.industrial_shelving_01#43527",
+        "facepunch.wooden_desk_02#43581"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "scenes/personal/gunnar/materials/material_zoo.vmap"
+      }
+    }
+  }
+}
