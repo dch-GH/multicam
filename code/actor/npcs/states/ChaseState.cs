@@ -15,7 +15,7 @@ public class ChaseState : StateComponent
 	[Property]
 	private StateComponent AttackState { get; set; }
 
-	[Property, Range(0, 300)]
+	[Property, Range( 0, 300 )]
 	private float AttackRange { get; set; }
 
 	private TargetingComponent TargetingComponent { get; set; }
@@ -26,7 +26,7 @@ public class ChaseState : StateComponent
 	{
 		base.OnAwake();
 
-		TargetingComponent = Components.Get<TargetingComponent>(true);
+		TargetingComponent = Components.Get<TargetingComponent>( true );
 	}
 
 	public override void OnEntered()
@@ -45,19 +45,19 @@ public class ChaseState : StateComponent
 	{
 		TargetingComponent.UpdateTargetFromDistance();
 
-		if (!TargetingComponent.HasTarget)
+		if ( !TargetingComponent.HasTarget )
 		{
-			if (ReturnState is not null)
-				Behaviour.SetState(ReturnState);
+			if ( ReturnState is not null )
+				Behaviour.SetState( ReturnState );
 
 			return;
 		}
 
-		Behaviour.Movement.NavMeshAgent.MoveTo(TargetingComponent.Target.Transform.Position);
+		Behaviour.Movement.NavMeshAgent.MoveTo( TargetingComponent.Target.Transform.Position );
 		//Behaviour.Movement.Destination = TargetingComponent.Target.Transform.Position;
 
-		if (TargetingComponent.DistanceToTarget < AttackRange && AttackState.CanEnter())
-			Behaviour.SetState(AttackState);
+		if ( TargetingComponent.DistanceToTarget < AttackRange && AttackState.CanEnter() )
+			Behaviour.SetState( AttackState );
 	}
 
 	public override void Tick()

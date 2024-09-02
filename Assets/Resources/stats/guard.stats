@@ -1,0 +1,64 @@
+{
+  "Core": {
+    "Strength": 10,
+    "Dexterity": 10,
+    "Constitution": 10,
+    "Wisdom": 10,
+    "Intelligence": 10,
+    "Charisma": 10
+  },
+  "Health": {
+    "Max": 30,
+    "RegenDelay": 1.5
+  },
+  "Stamina": {
+    "Max": 30,
+    "Regen": 3,
+    "RegenDelay": 1.5,
+    "CostMultiplier": 1
+  },
+  "Posture": {
+    "Max": 30,
+    "RegenDelay": 1.5
+  },
+  "Concentration": {
+    "Max": 30,
+    "Regen": 1.83,
+    "RegenDelay": 2.5,
+    "CostMultiplier": 1
+  },
+  "Actions": {
+    "ActionSpeed": 1,
+    "SpellCastingSpeed": 1,
+    "MoveSpeedMultiplier": 1.07,
+    "JumpHeightMultiplier": 1
+  },
+  "Combat": {
+    "PhysicalPower": 42,
+    "SpellPower": 82,
+    "FirePower": 71,
+    "FrostPower": 86,
+    "ElectricPower": 179,
+    "PoisonPower": 173,
+    "NecroticPower": 117,
+    "ArcanePower": 133,
+    "DivinePower": 183,
+    "OccultPower": 76,
+    "ArmorPenetration": 76,
+    "WardingPenetration": 100,
+    "FirePenetration": 183,
+    "FrostPenetration": 136,
+    "ElectricPenetration": 123,
+    "PoisonPenetration": 158,
+    "NecroticPenetration": 24,
+    "ArcanePenetration": 150,
+    "DivinePenetration": 140,
+    "OccultPenetration": 133,
+    "CriticalMultiplier": 1.5,
+    "KnockBack": 131
+  },
+  "Resistances": {},
+  "Misc": {},
+  "__references": [],
+  "__version": 0
+}

@@ -52,7 +52,7 @@
       {
         "__type": "Ironsim.Actor.ActorComponent",
         "__guid": "df3a94d7-628d-4ea6-a913-6521d8d9cb6d",
-        "BaseStats": "stats/player.stats",
+        "BaseStats": "resources/stats/player.stats",
         "CauseHitBounce": false,
         "EnableDeathSounds": true,
         "EnableImpactSounds": true,

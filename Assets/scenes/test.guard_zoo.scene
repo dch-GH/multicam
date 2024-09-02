@@ -173,7 +173,7 @@
           "__guid": "711e2477-c099-4fd7-9b3b-d1aed77213f8",
           "Flags": 0,
           "Name": "Cube",
-          "Position": "760.6561,45.13242,-59.68982",
+          "Position": "683.7075,0.08435059,-59.68982",
           "Scale": "3.179714,2.066322,1",
           "Tags": "shadow_volume",
           "Enabled": true,
@@ -192,7 +192,7 @@
               "__guid": "bdbb8706-9a70-4587-8281-99d49a8430d2",
               "Center": "0,0,0",
               "IsTrigger": true,
-              "Scale": "96.79999,116.3,50",
+              "Scale": "116.0998,232.7,50",
               "Static": false
             }
           ]
