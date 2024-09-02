@@ -12,9 +12,6 @@ public partial class ActorComponent : IDamageable
 	public bool PlayHitSound { get; set; } = true;
 
 	[Property, ToggleGroup("Damage")]
-	public bool ShowDamageNumbers { get; set; } = true;
-
-	[Property, ToggleGroup("Damage")]
 	public GameObject ImpactEffectPrefab { get; set; }
 
 	[Property, ToggleGroup("Damage")]
