@@ -48,6 +48,29 @@
         "_debug": false,
         "_lightPlanePrefab": "prefabs/player/lightplane.prefab",
         "_offset": "0,0,14"
+      },
+      {
+        "__type": "Ironsim.Actor.ActorComponent",
+        "__guid": "df3a94d7-628d-4ea6-a913-6521d8d9cb6d",
+        "BaseStats": "stats/player.stats",
+        "CauseHitBounce": false,
+        "EnableDeathSounds": true,
+        "EnableImpactSounds": true,
+        "EnableKnockBack": true,
+        "EnablePainSounds": true,
+        "HitboxDamageModifiers": [],
+        "PlayHitSound": true,
+        "ShouldRagdollOnDeath": true,
+        "Sounds": {}
+      },
+      {
+        "__type": "Ironsim.Actor.TargetComponent",
+        "__guid": "e526fd2a-a3ff-44a2-ba21-8d7b29dd5424",
+        "Factions": "Player",
+        "PrimaryTargetPoint": {
+          "_type": "gameobject",
+          "go": "2c6d6454-6f08-4d43-858b-5eec6d4c4791"
+        }
       }
     ],
     "Children": [

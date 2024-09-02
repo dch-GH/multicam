@@ -1,0 +1,13 @@
+{
+  "Core": {},
+  "Health": {},
+  "Stamina": {},
+  "Posture": {},
+  "Concentration": {},
+  "Actions": {},
+  "Combat": {},
+  "Resistances": {},
+  "Misc": {},
+  "__references": [],
+  "__version": 0
+}

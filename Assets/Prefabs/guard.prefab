@@ -25,11 +25,100 @@
         "UpdateRotation": false
       },
       {
-        "__type": "GuardAI",
-        "__guid": "51b11810-062a-49e4-b0e2-38d59b85f2dd"
+        "__type": "Sandbox.CharacterController",
+        "__guid": "7ddcf36f-8ed4-4d9d-84ce-590034d34ea7",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 16,
+        "StepHeight": 18,
+        "UseCollisionRules": false
+      },
+      {
+        "__type": "Ironsim.Actor.ActorComponent",
+        "__guid": "58c9eac6-0415-4f73-923c-85e2da7d4fe1",
+        "BaseStats": "stats/guard.stats",
+        "CauseHitBounce": false,
+        "EnableDeathSounds": true,
+        "EnableImpactSounds": true,
+        "EnableKnockBack": true,
+        "EnablePainSounds": true,
+        "HitboxDamageModifiers": [],
+        "PlayHitSound": true,
+        "ShouldRagdollOnDeath": true,
+        "Sounds": {}
+      },
+      {
+        "__type": "Ironsim.Actor.BehaviourComponent",
+        "__guid": "0bb17659-8c26-4d3d-8260-4b79a4649ce4",
+        "StartingState": {
+          "_type": "component",
+          "component_id": "fae67ef4-c5bf-4433-b900-78d3b780adc1",
+          "go": "52184a64-fc6d-4461-8fc1-ffca74646d90",
+          "component_type": "IdleState"
+        }
+      },
+      {
+        "__type": "Ironsim.Actor.Movement.MovementComponent",
+        "__guid": "b3282cb2-8996-47cf-b16a-614a71f8c00f"
+      },
+      {
+        "__type": "Ironsim.Actor.StateMachine.IdleState",
+        "__guid": "fae67ef4-c5bf-4433-b900-78d3b780adc1",
+        "DetectionState": {
+          "_type": "component",
+          "component_id": "19d25385-ed63-4769-9bbe-71f04b5f41d8",
+          "go": "52184a64-fc6d-4461-8fc1-ffca74646d90",
+          "component_type": "ChaseState"
+        }
+      },
+      {
+        "__type": "Ironsim.Actor.StateMachine.ChaseState",
+        "__guid": "19d25385-ed63-4769-9bbe-71f04b5f41d8",
+        "AttackRange": 0,
+        "ReturnState": {
+          "_type": "component",
+          "component_id": "fae67ef4-c5bf-4433-b900-78d3b780adc1",
+          "go": "52184a64-fc6d-4461-8fc1-ffca74646d90",
+          "component_type": "IdleState"
+        }
+      },
+      {
+        "__type": "Ironsim.Actor.TargetingComponent",
+        "__guid": "568a6dde-49e7-4634-ba97-a681ef569681",
+        "DetectionRange": 482.14,
+        "EnemyFactions": "Player"
+      },
+      {
+        "__type": "Ironsim.Actor.BodyComponent",
+        "__guid": "0779aae3-13d0-4547-9b47-f3f72d91d3f9",
+        "Collider": {
+          "_type": "gameobject",
+          "go": "52184a64-fc6d-4461-8fc1-ffca74646d90"
+        },
+        "HasRagdoll": true
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "c35feca4-5c22-4725-ad9a-13e14b3b04f1",
+        "Flags": 0,
+        "Name": "Cube",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "0276ec97-28be-4dd4-a197-b02ed842712e",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen/skin/skeleton/models/skeleton_skin.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
     "__variables": []
   },
   "ShowInMenu": false,

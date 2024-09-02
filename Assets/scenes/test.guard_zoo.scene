@@ -96,7 +96,7 @@
       "__guid": "16a25c20-b8c5-436f-9cbd-27cebb20402c",
       "Flags": 0,
       "Name": "Network System",
-      "Position": "278.9435,-440.7264,1363.141",
+      "Position": "-260.1012,-440.7264,1108.048",
       "Enabled": true,
       "Components": [
         {
@@ -634,6 +634,15 @@
           "Static": true
         }
       ]
+    },
+    {
+      "__guid": "45fa5aa2-c4d3-4b8d-b51a-1241e7507e17",
+      "Flags": 0,
+      "Name": "guard",
+      "Position": "-155.2398,-534.5488,1050.634",
+      "Enabled": true,
+      "__Prefab": "prefabs/guard.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

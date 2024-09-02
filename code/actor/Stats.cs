@@ -6,42 +6,42 @@ public class Stats
 {
 	private ActorComponent ActorComponent { get; set; }
 
-	public Stats(ActorComponent actorComponent)
+	public Stats( ActorComponent actorComponent )
 	{
 		ActorComponent = actorComponent;
 	}
-	
-	public float GetMaxHealthForConScore(float con)
+
+	public float GetMaxHealthForConScore( float con )
 	{
-		var health = ActorComponent.GetStat(StatType.MaxHealth) +
-					  GameBalanceResource.ActiveBalance.ConstitutionToMaxHealthCurve.Evaluate(con);
-		return MathF.Max(health, 1); //can't go below 1 max health.s
+		var health = ActorComponent.GetStat( StatType.MaxHealth ) +
+					  GameBalanceResource.ActiveBalance.ConstitutionToMaxHealthCurve.Evaluate( con );
+		return MathF.Max( health, 1 ); //can't go below 1 max health.s
 	}
 
-	public float GetMaxHealthForMaxHealthBonus(float bonus)
+	public float GetMaxHealthForMaxHealthBonus( float bonus )
 	{
-		return bonus + GameBalanceResource.ActiveBalance.ConstitutionToMaxHealthCurve.Evaluate(Constitution);
+		return bonus + GameBalanceResource.ActiveBalance.ConstitutionToMaxHealthCurve.Evaluate( Constitution );
 	}
 
-	public float GetMaxStaminaForConScore(float con)
+	public float GetMaxStaminaForConScore( float con )
 	{
-		return ActorComponent.GetStat(StatType.MaxStamina) +
-			   GameBalanceResource.ActiveBalance.ConstitutionToMaxStaminaCurve.Evaluate(con);
+		return ActorComponent.GetStat( StatType.MaxStamina ) +
+			   GameBalanceResource.ActiveBalance.ConstitutionToMaxStaminaCurve.Evaluate( con );
 	}
 
-	public float GetMaxStaminaForMaxStaminaBonus(float bonus)
+	public float GetMaxStaminaForMaxStaminaBonus( float bonus )
 	{
-		return bonus + GameBalanceResource.ActiveBalance.ConstitutionToMaxStaminaCurve.Evaluate(Constitution);
+		return bonus + GameBalanceResource.ActiveBalance.ConstitutionToMaxStaminaCurve.Evaluate( Constitution );
 	}
 
 	#region Core
 	//This is where our public facing stat values live. Not entirely sure this is the best way to handle it but it feels very neat.
-	public float Strength => ActorComponent.GetStat(StatType.Strength);
-	public float Dexterity => ActorComponent.GetStat(StatType.Dexterity);
-	public float Constitution => ActorComponent.GetStat(StatType.Constitution);
-	public float Wisdom => ActorComponent.GetStat(StatType.Wisdom);
-	public float Intelligence => ActorComponent.GetStat(StatType.Intelligence);
-	public float Charisma => ActorComponent.GetStat(StatType.Charisma);
+	public float Strength => ActorComponent.GetStat( StatType.Strength );
+	public float Dexterity => ActorComponent.GetStat( StatType.Dexterity );
+	public float Constitution => ActorComponent.GetStat( StatType.Constitution );
+	public float Wisdom => ActorComponent.GetStat( StatType.Wisdom );
+	public float Intelligence => ActorComponent.GetStat( StatType.Intelligence );
+	public float Charisma => ActorComponent.GetStat( StatType.Charisma );
 	#endregion
 
 	#region Health
@@ -49,9 +49,9 @@ public class Stats
 	{
 		get
 		{
-			var health = ActorComponent.GetStat(StatType.MaxHealth) +
-						   GameBalanceResource.ActiveBalance.ConstitutionToMaxHealthCurve.Evaluate(Constitution);
-			return MathF.Max(health, 1); //can't go below 1 max health.
+			var health = ActorComponent.GetStat( StatType.MaxHealth ) +
+						   GameBalanceResource.ActiveBalance.ConstitutionToMaxHealthCurve.Evaluate( Constitution );
+			return MathF.Max( health, 1 ); //can't go below 1 max health.
 		}
 	}
 
@@ -59,8 +59,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.HealthRegen) +
-				   GameBalanceResource.ActiveBalance.ConstitutionToHealthRegenCurve.Evaluate(Constitution);
+			return ActorComponent.GetStat( StatType.HealthRegen ) +
+				   GameBalanceResource.ActiveBalance.ConstitutionToHealthRegenCurve.Evaluate( Constitution );
 		}
 	}
 
@@ -68,8 +68,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.HealthRegenDelay) +
-				   GameBalanceResource.ActiveBalance.ConstitutionToHealthRegenDelayCurve.Evaluate(Constitution);
+			return ActorComponent.GetStat( StatType.HealthRegenDelay ) +
+				   GameBalanceResource.ActiveBalance.ConstitutionToHealthRegenDelayCurve.Evaluate( Constitution );
 		}
 	}
 
@@ -77,8 +77,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.HealMultiplier) +
-				   GameBalanceResource.ActiveBalance.ConstitutionToHealMultiplierCurve.Evaluate(Constitution);
+			return ActorComponent.GetStat( StatType.HealMultiplier ) +
+				   GameBalanceResource.ActiveBalance.ConstitutionToHealMultiplierCurve.Evaluate( Constitution );
 		}
 	}
 	#endregion
@@ -89,8 +89,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.MaxStamina) +
-				   GameBalanceResource.ActiveBalance.ConstitutionToMaxStaminaCurve.Evaluate(Constitution);
+			return ActorComponent.GetStat( StatType.MaxStamina ) +
+				   GameBalanceResource.ActiveBalance.ConstitutionToMaxStaminaCurve.Evaluate( Constitution );
 		}
 	}
 
@@ -98,8 +98,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.StaminaRegen) +
-				   GameBalanceResource.ActiveBalance.DexterityToStaminaRegenCurve.Evaluate(Dexterity);
+			return ActorComponent.GetStat( StatType.StaminaRegen ) +
+				   GameBalanceResource.ActiveBalance.DexterityToStaminaRegenCurve.Evaluate( Dexterity );
 		}
 	}
 
@@ -107,8 +107,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.StaminaRegenDelay) +
-				   GameBalanceResource.ActiveBalance.DexterityToStaminaRegenDelayCurve.Evaluate(Dexterity);
+			return ActorComponent.GetStat( StatType.StaminaRegenDelay ) +
+				   GameBalanceResource.ActiveBalance.DexterityToStaminaRegenDelayCurve.Evaluate( Dexterity );
 		}
 	}
 
@@ -116,8 +116,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.StaminaCostMultiplier) +
-				   GameBalanceResource.ActiveBalance.StrengthToStaminaCostMultiplierCurve.Evaluate(Strength);
+			return ActorComponent.GetStat( StatType.StaminaCostMultiplier ) +
+				   GameBalanceResource.ActiveBalance.StrengthToStaminaCostMultiplierCurve.Evaluate( Strength );
 		}
 	}
 
@@ -129,7 +129,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.MaxConcentration);
+			return ActorComponent.GetStat( StatType.MaxConcentration );
 		}
 	}
 
@@ -137,7 +137,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.ConcentrationRegen);
+			return ActorComponent.GetStat( StatType.ConcentrationRegen );
 		}
 	}
 
@@ -145,7 +145,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.ConcentrationRegenDelay);
+			return ActorComponent.GetStat( StatType.ConcentrationRegenDelay );
 		}
 	}
 
@@ -153,7 +153,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.ConcentrationCostMultiplier);
+			return ActorComponent.GetStat( StatType.ConcentrationCostMultiplier );
 		}
 	}
 
@@ -164,7 +164,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.MaxPosture);
+			return ActorComponent.GetStat( StatType.MaxPosture );
 		}
 	}
 
@@ -172,7 +172,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.PostureRegen);
+			return ActorComponent.GetStat( StatType.PostureRegen );
 		}
 	}
 
@@ -180,7 +180,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.PostureRegenDelay);
+			return ActorComponent.GetStat( StatType.PostureRegenDelay );
 		}
 	}
 	#endregion
@@ -190,8 +190,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.ActionSpeed) +
-				   GameBalanceResource.ActiveBalance.DexterityToActionSpeedCurve.Evaluate(Dexterity);
+			return ActorComponent.GetStat( StatType.ActionSpeed ) +
+				   GameBalanceResource.ActiveBalance.DexterityToActionSpeedCurve.Evaluate( Dexterity );
 		}
 	}
 
@@ -199,8 +199,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.SpellCastingSpeed) +
-				   GameBalanceResource.ActiveBalance.SpellCastingAttributeToSpellCastingSpeedCurve.Evaluate(Intelligence);
+			return ActorComponent.GetStat( StatType.SpellCastingSpeed ) +
+				   GameBalanceResource.ActiveBalance.SpellCastingAttributeToSpellCastingSpeedCurve.Evaluate( Intelligence );
 		}
 	}
 	#endregion
@@ -210,8 +210,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.MoveSpeedMultiplier) +
-				   GameBalanceResource.ActiveBalance.DexterityToMoveSpeedCurve.Evaluate(Dexterity);
+			return ActorComponent.GetStat( StatType.MoveSpeedMultiplier ) +
+				   GameBalanceResource.ActiveBalance.DexterityToMoveSpeedCurve.Evaluate( Dexterity );
 		}
 	}
 
@@ -219,8 +219,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.JumpHeightMultiplier) +
-				   GameBalanceResource.ActiveBalance.StrengthToJumpHeightCurve.Evaluate(Strength);
+			return ActorComponent.GetStat( StatType.JumpHeightMultiplier ) +
+				   GameBalanceResource.ActiveBalance.StrengthToJumpHeightCurve.Evaluate( Strength );
 		}
 	}
 	#endregion
@@ -231,8 +231,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.PhysicalPower) +
-				   GameBalanceResource.ActiveBalance.PrimaryAttributeToPhysicalPowerCurve.Evaluate(Strength);
+			return ActorComponent.GetStat( StatType.PhysicalPower ) +
+				   GameBalanceResource.ActiveBalance.PrimaryAttributeToPhysicalPowerCurve.Evaluate( Strength );
 		}
 	}
 
@@ -240,42 +240,42 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.SpellPower) +
+			return ActorComponent.GetStat( StatType.SpellPower ) +
 				   GameBalanceResource.ActiveBalance.SpellCastingAttributeToSpellPowerCurve.Evaluate(
-					   Intelligence);
+					   Intelligence );
 		}
 	}
 
-	public float FirePower => ActorComponent.GetStat(StatType.FirePower);
-	public float FrostPower => ActorComponent.GetStat(StatType.FrostPower);
-	public float ElectricPower => ActorComponent.GetStat(StatType.ElectricPower);
-	public float PoisonPower => ActorComponent.GetStat(StatType.PoisonPower);
-	public float NecroticPower => ActorComponent.GetStat(StatType.NecroticPower);
+	public float FirePower => ActorComponent.GetStat( StatType.FirePower );
+	public float FrostPower => ActorComponent.GetStat( StatType.FrostPower );
+	public float ElectricPower => ActorComponent.GetStat( StatType.ElectricPower );
+	public float PoisonPower => ActorComponent.GetStat( StatType.PoisonPower );
+	public float NecroticPower => ActorComponent.GetStat( StatType.NecroticPower );
 
-	public float ArcanePower => ActorComponent.GetStat(StatType.ArcanePower);
-	public float DivinePower => ActorComponent.GetStat(StatType.DivinePower);
-	public float OccultPower => ActorComponent.GetStat(StatType.OccultPower);
+	public float ArcanePower => ActorComponent.GetStat( StatType.ArcanePower );
+	public float DivinePower => ActorComponent.GetStat( StatType.DivinePower );
+	public float OccultPower => ActorComponent.GetStat( StatType.OccultPower );
 
-	public float ArmorPenetration => ActorComponent.GetStat(StatType.ArmorPenetration);
-	public float WardingPenetration => ActorComponent.GetStat(StatType.WardingPenetration);
-	public float FirePenetration => ActorComponent.GetStat(StatType.FirePenetration);
-	public float FrostPenetration => ActorComponent.GetStat(StatType.FrostPenetration);
-	public float ElectricPenetration => ActorComponent.GetStat(StatType.ElectricPenetration);
-	public float PoisonPenetration => ActorComponent.GetStat(StatType.PoisonPenetration);
-	public float NecroticPenetration => ActorComponent.GetStat(StatType.NecroticPenetration);
+	public float ArmorPenetration => ActorComponent.GetStat( StatType.ArmorPenetration );
+	public float WardingPenetration => ActorComponent.GetStat( StatType.WardingPenetration );
+	public float FirePenetration => ActorComponent.GetStat( StatType.FirePenetration );
+	public float FrostPenetration => ActorComponent.GetStat( StatType.FrostPenetration );
+	public float ElectricPenetration => ActorComponent.GetStat( StatType.ElectricPenetration );
+	public float PoisonPenetration => ActorComponent.GetStat( StatType.PoisonPenetration );
+	public float NecroticPenetration => ActorComponent.GetStat( StatType.NecroticPenetration );
 
-	public float ArcanePenetration => ActorComponent.GetStat(StatType.ArcanePenetration);
-	public float DivinePenetration => ActorComponent.GetStat(StatType.DivinePenetration);
-	public float OccultPenetration => ActorComponent.GetStat(StatType.OccultPenetration);
+	public float ArcanePenetration => ActorComponent.GetStat( StatType.ArcanePenetration );
+	public float DivinePenetration => ActorComponent.GetStat( StatType.DivinePenetration );
+	public float OccultPenetration => ActorComponent.GetStat( StatType.OccultPenetration );
 
-	public float CriticalMultiplier => ActorComponent.GetStat(StatType.CriticalMultiplier);
+	public float CriticalMultiplier => ActorComponent.GetStat( StatType.CriticalMultiplier );
 
 	public float KnockBack
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.KnockBack) + GameBalanceResource.ActiveBalance.StrengthToKnockBackCurve.Evaluate(
-				Strength);
+			return ActorComponent.GetStat( StatType.KnockBack ) + GameBalanceResource.ActiveBalance.StrengthToKnockBackCurve.Evaluate(
+				Strength );
 		}
 	}
 
@@ -283,20 +283,20 @@ public class Stats
 
 	#region Defense
 
-	public float Armor => ActorComponent.GetStat(StatType.Armor);
-	public float Warding => ActorComponent.GetStat(StatType.Warding);
-	public float CriticalNegation => ActorComponent.GetStat(StatType.CriticalNegation);
-	public float KnockBackResistance => ActorComponent.GetStat(StatType.KnockBackResistance);
+	public float Armor => ActorComponent.GetStat( StatType.Armor );
+	public float Warding => ActorComponent.GetStat( StatType.Warding );
+	public float CriticalNegation => ActorComponent.GetStat( StatType.CriticalNegation );
+	public float KnockBackResistance => ActorComponent.GetStat( StatType.KnockBackResistance );
 
-	public float FireResistance => ActorComponent.GetStat(StatType.FireResistance);
-	public float FrostResistance => ActorComponent.GetStat(StatType.FrostResistance);
-	public float ElectricResistance => ActorComponent.GetStat(StatType.ElectricResistance);
-	public float PoisonResistance => ActorComponent.GetStat(StatType.PoisonResistance);
-	public float NecroticResistance => ActorComponent.GetStat(StatType.NecroticResistance);
+	public float FireResistance => ActorComponent.GetStat( StatType.FireResistance );
+	public float FrostResistance => ActorComponent.GetStat( StatType.FrostResistance );
+	public float ElectricResistance => ActorComponent.GetStat( StatType.ElectricResistance );
+	public float PoisonResistance => ActorComponent.GetStat( StatType.PoisonResistance );
+	public float NecroticResistance => ActorComponent.GetStat( StatType.NecroticResistance );
 
-	public float ArcaneResistance => ActorComponent.GetStat(StatType.ArcaneResistance);
-	public float DivineResistance => ActorComponent.GetStat(StatType.DivineResistance);
-	public float OccultResistance => ActorComponent.GetStat(StatType.OccultResistance);
+	public float ArcaneResistance => ActorComponent.GetStat( StatType.ArcaneResistance );
+	public float DivineResistance => ActorComponent.GetStat( StatType.DivineResistance );
+	public float OccultResistance => ActorComponent.GetStat( StatType.OccultResistance );
 
 	#endregion
 
@@ -306,8 +306,8 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.CarryWeight) +
-				   GameBalanceResource.ActiveBalance.StrengthToCarryWeightCurve.Evaluate(Strength);
+			return ActorComponent.GetStat( StatType.CarryWeight ) +
+				   GameBalanceResource.ActiveBalance.StrengthToCarryWeightCurve.Evaluate( Strength );
 		}
 	}
 
@@ -315,7 +315,7 @@ public class Stats
 	{
 		get
 		{
-			return ActorComponent.GetStat(StatType.Luck);
+			return ActorComponent.GetStat( StatType.Luck );
 		}
 	}
 
@@ -323,7 +323,7 @@ public class Stats
 
 	//i really tried my best to avoid something like this but frankly, it is awfully convenient.
 	//perhaps if i hate myself enough i'll rewrite this mess
-	public float GetStatForStatType(StatType type)
+	public float GetStatForStatType( StatType type )
 	{
 		return type switch
 		{
@@ -404,7 +404,7 @@ public class Stats
 			StatType.CarryWeight => CarryWeight,
 			StatType.Luck => Luck,
 
-			_ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
+			_ => throw new ArgumentOutOfRangeException( nameof( type ), type, null )
 		};
 	}
 
