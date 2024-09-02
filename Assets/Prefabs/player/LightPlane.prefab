@@ -1,0 +1,57 @@
+{
+  "RootObject": {
+    "__guid": "87eb81d3-36b8-450b-9780-c302a09156fb",
+    "Flags": 0,
+    "Name": "lightplane",
+    "Scale": "0.1,0.1,1",
+    "Tags": "light_plane",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "483b6d14-d9be-4468-9bbf-9269040a11f8",
+        "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/default/white.vmat",
+        "Model": "models/dev/plane.vmdl",
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "face8858-df4b-48ee-af39-98a2fcf10bfa",
+        "Flags": 0,
+        "Name": "LightDetectionCamera",
+        "Position": "-0.000001503977,0,8.41085",
+        "Rotation": "0,0.7071067,0,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.CameraComponent",
+            "__guid": "8387212a-5f25-4e0e-890a-cba963cdba15",
+            "BackgroundColor": "0,0,0,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": false,
+            "Orthographic": true,
+            "OrthographicHeight": 4,
+            "Priority": 1,
+            "RenderExcludeTags": "player_body",
+            "RenderTags": "light,light_plane",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 16,
+            "ZNear": 1
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

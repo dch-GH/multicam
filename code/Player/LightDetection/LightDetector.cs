@@ -6,7 +6,7 @@ public sealed class LightDetector : Component, Component.ITriggerListener
 {
 	public bool IsInShadow { get; private set; }
 
-	[Property] private PrefabFile _lightPlatePrefab = null;
+	[Property] private PrefabFile _lightPlanePrefab = null;
 	[Property] private Vector3 _offset = 0;
 	[Property, Range( 0, 255 )] private int _brightnessThreshold = 165;
 	[Property, Description( "Display the light detection debug viewer." )] private bool _debug = false;
@@ -21,7 +21,7 @@ public sealed class LightDetector : Component, Component.ITriggerListener
 
 	protected override void OnStart()
 	{
-		_lightPlane = GameObject.Clone( _lightPlatePrefab );
+		_lightPlane = GameObject.Clone( _lightPlanePrefab );
 		_lightPlane.BreakFromPrefab();
 
 		_lightcamera = _lightPlane.Components.Get<CameraComponent>( FindMode.EverythingInSelfAndChildren );
@@ -35,8 +35,8 @@ public sealed class LightDetector : Component, Component.ITriggerListener
 	{
 		_lightPlane.Transform.Position = Transform.Position + _offset;
 
-		// Assume we aren't in the shadows by default.
-		IsInShadow = false;
+		// Assume we are in the shadows by default.
+		IsInShadow = true;
 
 		for ( int i = 0; i < _lightBuffer.Length; i++ )
 		{

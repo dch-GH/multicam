@@ -36,6 +36,18 @@
         "RunMoveSpeed": 190,
         "SprintMoveSpeed": 320,
         "WalkMoveSpeed": 110
+      },
+      {
+        "__type": "Ironsim.Player",
+        "__guid": "14d1e007-77c9-4412-a277-d1dbb2955231"
+      },
+      {
+        "__type": "Ironsim.LightDetector",
+        "__guid": "d5cf2257-20e7-4516-a483-22880d56a1ca",
+        "_brightnessThreshold": 65,
+        "_debug": false,
+        "_lightPlanePrefab": "prefabs/player/lightplane.prefab",
+        "_offset": "0,0,14"
       }
     ],
     "Children": [
@@ -79,36 +91,6 @@
               "go": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
               "component_type": "SkinnedModelRenderer"
             }
-          }
-        ]
-      },
-      {
-        "__guid": "95477550-0a10-434c-a33f-da8fea48e91b",
-        "Flags": 0,
-        "Name": "Pusher",
-        "Position": "0,0,22.68671",
-        "Components": [
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "e3200339-803e-40d9-80d2-074e7cab6eee",
-            "Center": "0,0,0",
-            "IsTrigger": false,
-            "Scale": "36,36,40",
-            "Static": false
-          }
-        ]
-      },
-      {
-        "__guid": "4400351a-2ebc-41fc-8991-14b537cec521",
-        "Flags": 0,
-        "Name": "Pusher",
-        "Position": "0,0,32",
-        "Enabled": true,
-        "Components": [
-          {
-            "__type": "PlayerPusher",
-            "__guid": "53a983ef-cf72-4eba-9c9b-e2bc7c9d5805",
-            "Radius": 32
           }
         ]
       }
