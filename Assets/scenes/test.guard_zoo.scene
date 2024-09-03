@@ -96,7 +96,8 @@
       "__guid": "16a25c20-b8c5-436f-9cbd-27cebb20402c",
       "Flags": 0,
       "Name": "Network System",
-      "Position": "-260.1012,-440.7264,1108.048",
+      "Position": "94.18904,-512.8152,99.53366",
+      "Rotation": "0,0,-0.7071069,-0.7071066",
       "Enabled": true,
       "Components": [
         {
@@ -120,7 +121,7 @@
       "__guid": "66cee047-c868-48ac-a5c2-ec230a2274e3",
       "Flags": 0,
       "Name": "Screen",
-      "Position": "55.4256,-387.476,1046.537",
+      "Position": "55.4256,-387.476,0",
       "Enabled": true,
       "Components": [
         {
@@ -142,14 +143,14 @@
       "__guid": "ffe1248b-0f4d-4879-95f9-fa0f016f6b1a",
       "Flags": 0,
       "Name": "Dynamic",
-      "Position": "-308.7452,-547.5107,1121.237",
+      "Position": "-308.7452,-547.5107,0",
       "Enabled": true,
       "Children": [
         {
           "__guid": "a1633fc9-7736-4c39-a03b-2c08f4745fce",
           "Flags": 0,
           "Name": "MovingLight1",
-          "Position": "318.5786,203.8999,0",
+          "Position": "318.5786,203.8999,141.8291",
           "Tags": "light_point,light",
           "Enabled": true,
           "Components": [
@@ -251,7 +252,7 @@
           "__guid": "39ffeb29-a2c0-459e-b116-e2f7cd4e6314",
           "Flags": 0,
           "Name": "Box",
-          "Position": "-305.3112,-693.8795,985.6339",
+          "Position": "-305.3112,-693.8795,0",
           "Enabled": true,
           "Components": [
             {
@@ -326,10 +327,10 @@
                 "TextureOffset": [
                   "197.2446,296.481",
                   "197.2446,296.4805",
-                  "296.4805,358.5356",
-                  "215.5195,358.5356",
-                  "314.7549,358.5356",
-                  "197.2451,358.5356"
+                  "296.4805,0",
+                  "215.5195,0",
+                  "314.7549,0",
+                  "197.2451,0"
                 ],
                 "MaterialIndex": [
                   0,
@@ -380,7 +381,7 @@
       "__guid": "4c205884-485c-4181-9f21-4c09f3874ab1",
       "Flags": 0,
       "Name": "Box",
-      "Position": "-356.7158,-463.1862,1113.634",
+      "Position": "-356.7158,-463.1862,128",
       "Enabled": true,
       "Components": [
         {
@@ -455,10 +456,10 @@
             "TextureOffset": [
               "402.8679,195.2556",
               "402.8679,195.2556",
-              "195.2554,358.5361",
-              "316.7446,358.5361",
-              "109.1321,358.5361",
-              "402.8679,358.5361"
+              "195.2554,0",
+              "316.7446,0",
+              "109.1321,0",
+              "402.8679,0"
             ],
             "MaterialIndex": [
               0,
@@ -507,7 +508,7 @@
       "__guid": "eef5b34f-ba7b-4a0e-8205-f7cfab0e828d",
       "Flags": 0,
       "Name": "Box (1)",
-      "Position": "-356.7158,-689.0862,1113.634",
+      "Position": "-356.7158,-689.0862,128",
       "Rotation": "0,0,-0.3826834,0.9238796",
       "Enabled": true,
       "Components": [
@@ -583,10 +584,10 @@
             "TextureOffset": [
               "83.91266,114.0249",
               "83.9126,114.0249",
-              "114.0256,358.5361",
-              "397.9744,358.5361",
-              "428.0858,358.5361",
-              "83.91455,358.5361"
+              "114.0256,0",
+              "397.9744,0",
+              "428.0858,0",
+              "83.91455,0"
             ],
             "MaterialIndex": [
               0,
@@ -635,89 +636,31 @@
       "__guid": "45fa5aa2-c4d3-4b8d-b51a-1241e7507e17",
       "Flags": 0,
       "Name": "guard",
-      "Position": "-155.2398,-534.5488,1050.634",
+      "Position": "-155.2398,-534.5488,64",
       "Enabled": true,
       "__Prefab": "prefabs/guard.prefab",
       "__PrefabVariables": {}
     },
     {
-      "__guid": "7ba072be-5511-4466-9d0c-3c7343b3eeae",
-      "Flags": 0,
-      "Name": "Object",
-      "Position": "-124.3287,110.6361,-45.3637",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.States.StateMachineComponent",
-          "__guid": "aa317442-fec9-423c-8711-f6a0b33c6122",
-          "Serialized": {
-            "States": [
-              {
-                "Name": "idle",
-                "UserData": {
-                  "Position": "-192,-96"
-                }
-              },
-              {
-                "Id": 1,
-                "Name": "attack",
-                "UserData": {
-                  "Position": "32,-96"
-                }
-              }
-            ],
-            "Transitions": [
-              {
-                "Id": 2,
-                "TargetId": 1,
-                "Condition": {
-                  "__version": 7,
-                  "__guid": "252f8d43-7bb1-4031-9b7b-eb2dd13d5680",
-                  "UserData": {
-                    "Title": "Condition",
-                    "ReferencedComponentTypes": []
-                  },
-                  "Variables": [],
-                  "Nodes": [
-                    {
-                      "Id": 0,
-                      "Type": "input"
-                    },
-                    {
-                      "Id": 1,
-                      "Type": "output",
-                      "UserData": {
-                        "Position": "160,0"
-                      }
-                    }
-                  ],
-                  "Links": [
-                    {
-                      "SrcId": 0,
-                      "SrcName": "_signal",
-                      "DstId": 1,
-                      "DstName": "_signal"
-                    }
-                  ]
-                }
-              }
-            ],
-            "InitialStateId": 0
-          }
-        }
-      ]
-    },
-    {
       "__guid": "38596138-f3c0-4570-a3fc-a894a4584216",
       "Flags": 0,
       "Name": "Path",
-      "Position": "0,0,1103.625",
+      "Position": "-74.71772,-164.0615,127.9999",
       "Enabled": true,
       "Components": [
         {
           "__type": "Ironsim.AI.PatrolPathComponent",
           "__guid": "b486294f-bb9c-461c-9a8d-1ae62f15843d",
-          "IsLoop": false
+          "IsLoop": true,
+          "Path": {
+            "Nodes": [
+              {},
+              {},
+              {},
+              {}
+            ],
+            "Count": 4
+          }
         }
       ]
     }
