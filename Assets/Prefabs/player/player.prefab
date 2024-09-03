@@ -6,6 +6,18 @@
     "Enabled": true,
     "Components": [
       {
+        "__type": "Ironsim.PlayerComponent",
+        "__guid": "daa13938-be35-4cb6-9777-1ef4d3ee5331"
+      },
+      {
+        "__type": "Ironsim.LightDetectorComponent",
+        "__guid": "36e07287-c883-4145-848e-fdde93d11224",
+        "_brightnessThreshold": 62,
+        "_debug": false,
+        "_lightPlanePrefab": "prefabs/player/lightplane.prefab",
+        "_offset": "0,0,14"
+      },
+      {
         "__type": "Sandbox.CharacterController",
         "__guid": "d00f411a-4c6f-4100-985b-ba30839a56ce",
         "Acceleration": 32,
@@ -36,32 +48,6 @@
         "RunMoveSpeed": 190,
         "SprintMoveSpeed": 320,
         "WalkMoveSpeed": 110
-      },
-      {
-        "__type": "Ironsim.Player",
-        "__guid": "14d1e007-77c9-4412-a277-d1dbb2955231"
-      },
-      {
-        "__type": "Ironsim.LightDetector",
-        "__guid": "d5cf2257-20e7-4516-a483-22880d56a1ca",
-        "_brightnessThreshold": 65,
-        "_debug": false,
-        "_lightPlanePrefab": "prefabs/player/lightplane.prefab",
-        "_offset": "0,0,14"
-      },
-      {
-        "__type": "Ironsim.Actor.ActorComponent",
-        "__guid": "df3a94d7-628d-4ea6-a913-6521d8d9cb6d",
-        "BaseStats": "resources/stats/player.stats",
-        "CauseHitBounce": false,
-        "EnableDeathSounds": true,
-        "EnableImpactSounds": true,
-        "EnableKnockBack": true,
-        "EnablePainSounds": true,
-        "HitboxDamageModifiers": [],
-        "PlayHitSound": true,
-        "ShouldRagdollOnDeath": true,
-        "Sounds": {}
       },
       {
         "__type": "Ironsim.Actor.TargetComponent",

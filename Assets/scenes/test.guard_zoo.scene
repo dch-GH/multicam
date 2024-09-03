@@ -162,10 +162,6 @@
               "LightColor": "0.91373,0.98039,1,1",
               "Radius": 135.29987,
               "Shadows": true
-            },
-            {
-              "__type": "Ironsim.MovingLight",
-              "__guid": "242575d9-2bff-4a68-906d-f431bcf6ba3e"
             }
           ]
         },
@@ -643,6 +639,87 @@
       "Enabled": true,
       "__Prefab": "prefabs/guard.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "7ba072be-5511-4466-9d0c-3c7343b3eeae",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-124.3287,110.6361,-45.3637",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.States.StateMachineComponent",
+          "__guid": "aa317442-fec9-423c-8711-f6a0b33c6122",
+          "Serialized": {
+            "States": [
+              {
+                "Name": "idle",
+                "UserData": {
+                  "Position": "-192,-96"
+                }
+              },
+              {
+                "Id": 1,
+                "Name": "attack",
+                "UserData": {
+                  "Position": "32,-96"
+                }
+              }
+            ],
+            "Transitions": [
+              {
+                "Id": 2,
+                "TargetId": 1,
+                "Condition": {
+                  "__version": 7,
+                  "__guid": "252f8d43-7bb1-4031-9b7b-eb2dd13d5680",
+                  "UserData": {
+                    "Title": "Condition",
+                    "ReferencedComponentTypes": []
+                  },
+                  "Variables": [],
+                  "Nodes": [
+                    {
+                      "Id": 0,
+                      "Type": "input"
+                    },
+                    {
+                      "Id": 1,
+                      "Type": "output",
+                      "UserData": {
+                        "Position": "160,0"
+                      }
+                    }
+                  ],
+                  "Links": [
+                    {
+                      "SrcId": 0,
+                      "SrcName": "_signal",
+                      "DstId": 1,
+                      "DstName": "_signal"
+                    }
+                  ]
+                }
+              }
+            ],
+            "InitialStateId": 0
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "38596138-f3c0-4570-a3fc-a894a4584216",
+      "Flags": 0,
+      "Name": "Path",
+      "Position": "0,0,1103.625",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Ironsim.AI.PatrolPathComponent",
+          "__guid": "b486294f-bb9c-461c-9a8d-1ae62f15843d",
+          "IsLoop": false
+        }
+      ]
     }
   ],
   "SceneProperties": {

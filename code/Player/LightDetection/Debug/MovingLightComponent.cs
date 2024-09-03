@@ -1,6 +1,6 @@
 namespace Ironsim;
 
-public sealed class MovingLight : Component
+public sealed class MovingLightComponent : Component
 {
 	private float minTarget;
 	private float maxTarget;

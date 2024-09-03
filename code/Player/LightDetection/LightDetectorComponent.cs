@@ -2,7 +2,7 @@ using Sandbox.Diagnostics;
 
 namespace Ironsim;
 
-public sealed class LightDetector : Component, Component.ITriggerListener
+public sealed class LightDetectorComponent : Component, Component.ITriggerListener
 {
 	public bool IsInShadow { get; private set; }
 
