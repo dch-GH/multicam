@@ -37,8 +37,8 @@
         "UseCollisionRules": false
       },
       {
-        "__type": "Ironsim.Actor.Movement.MovementComponent",
-        "__guid": "b3282cb2-8996-47cf-b16a-614a71f8c00f"
+        "__type": "Ironsim.AI.GuardComponent",
+        "__guid": "62e29b22-75dc-4db7-acb5-a371c88e06ba"
       }
     ],
     "Children": [

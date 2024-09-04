@@ -633,34 +633,177 @@
       ]
     },
     {
-      "__guid": "45fa5aa2-c4d3-4b8d-b51a-1241e7507e17",
+      "__guid": "682698ec-d0f4-4b56-b6dd-4aa26f03c881",
       "Flags": 0,
       "Name": "guard",
-      "Position": "-155.2398,-534.5488,64",
+      "Position": "-5.678009,-395.2461,65",
       "Enabled": true,
-      "__Prefab": "prefabs/guard.prefab",
-      "__PrefabVariables": {}
+      "Components": [
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "648a50d8-4b4a-431d-b693-5864549affe0",
+          "Center": "0,0,25.80009",
+          "IsTrigger": false,
+          "Scale": "14.80001,16.00008,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "ae0f427b-9067-4e33-a2c2-f01f7797fdda",
+          "Acceleration": 50,
+          "Height": 51.100136,
+          "MaxSpeed": 120,
+          "Radius": 10.69998,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": false
+        },
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "77a6e17c-09cc-44c3-bda9-62779f053218",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18,
+          "UseCollisionRules": false
+        },
+        {
+          "__type": "Ironsim.AI.GuardComponent",
+          "__guid": "c9b60b56-7684-46a5-8e00-4666c767cb61"
+        },
+        {
+          "__type": "Ironsim.AI.PatrolComponent",
+          "__guid": "099a130b-018f-4208-bf47-9d0208132c56",
+          "PatrolPath": {
+            "_type": "component",
+            "component_id": "b486294f-bb9c-461c-9a8d-1ae62f15843d",
+            "go": "38596138-f3c0-4570-a3fc-a894a4584216",
+            "component_type": "PatrolPathComponent"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "dbdf2596-9a87-4acf-a1b3-329667be6b40",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "23aa4ad8-7700-4c44-a240-cff2d47369b9",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/citizen/skin/skeleton/models/skeleton_skin.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
     },
     {
       "__guid": "38596138-f3c0-4570-a3fc-a894a4584216",
       "Flags": 0,
       "Name": "Path",
-      "Position": "-74.71772,-164.0615,127.9999",
+      "Position": "11.62747,-133.9169,128",
       "Enabled": true,
       "Components": [
         {
           "__type": "Ironsim.AI.PatrolPathComponent",
           "__guid": "b486294f-bb9c-461c-9a8d-1ae62f15843d",
           "IsLoop": true,
-          "Path": {
-            "Nodes": [
-              {},
-              {},
-              {},
-              {}
-            ],
-            "Count": 4
-          }
+          "Path": [
+            {
+              "_type": "component",
+              "component_id": "027d0e82-490c-42c7-99ae-a6c4d66d8a95",
+              "go": "19f8c3f2-14d8-4094-a095-44312dffa5d3",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "8df33a7c-382e-4084-8f21-43fe4482deff",
+              "go": "73fd9049-da3e-4a28-8711-f5b157d2219e",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "40f27eb4-13e9-4d27-8e85-e3c95f62bcbd",
+              "go": "0f0e3219-71fe-43bb-952c-b401f608440c",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "4691924c-0182-4a55-8ade-e0f3ec5d9796",
+              "go": "8e17489f-ce94-49be-8efb-6185249542bf",
+              "component_type": "PatrolNodeComponent"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "19f8c3f2-14d8-4094-a095-44312dffa5d3",
+          "Flags": 0,
+          "Name": "Node: 0 - 38596138-f3c0-4570-a3fc-a894a4584216",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "027d0e82-490c-42c7-99ae-a6c4d66d8a95",
+              "Index": 0,
+              "Position": "0,0,0",
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "73fd9049-da3e-4a28-8711-f5b157d2219e",
+          "Flags": 0,
+          "Name": "Node: 1 - 38596138-f3c0-4570-a3fc-a894a4584216",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "8df33a7c-382e-4084-8f21-43fe4482deff",
+              "Index": 1,
+              "Position": "17.84078,115.7583,-0.00001196835",
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "0f0e3219-71fe-43bb-952c-b401f608440c",
+          "Flags": 0,
+          "Name": "Node: 2 - 38596138-f3c0-4570-a3fc-a894a4584216",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "40f27eb4-13e9-4d27-8e85-e3c95f62bcbd",
+              "Index": 2,
+              "Position": "129.0096,9.958495,-0.00001744583",
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "8e17489f-ce94-49be-8efb-6185249542bf",
+          "Flags": 0,
+          "Name": "Node: 3 - 38596138-f3c0-4570-a3fc-a894a4584216",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "4691924c-0182-4a55-8ade-e0f3ec5d9796",
+              "Index": 3,
+              "Position": "75.89428,-45.89996,0.00001385826",
+              "Visited": false
+            }
+          ]
         }
       ]
     }
