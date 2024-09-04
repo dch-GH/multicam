@@ -1,8 +1,9 @@
+
 namespace Ironsim.AI;
 
 public sealed class PatrolPathComponent : Component
 {
-	[Property] public List<PatrolNodeComponent> Path { get; private set; }
+	[Property] public List<PatrolNodeComponent> Nodes { get; private set; }
 
 	/// <summary>
 	/// Do we loop at the end?
@@ -10,37 +11,45 @@ public sealed class PatrolPathComponent : Component
 	/// /// 
 	[Property] public bool IsLoop;
 
-	public int Count => Path is null ? 0 : Path.Count;
-	public bool IsEmpty => Path is null ? true : Path.Count <= 0;
+	public bool IsBeingEdited { get; private set; }
+
+	public int Count => Nodes is null ? 0 : Nodes.Count;
+	public bool IsEmpty => Nodes is null ? true : Nodes.Count <= 0;
 
 	public PatrolNodeComponent this[int index]
 	{
-		get => Path[index];
-		set => Path[index] = value;
+		get => Nodes[index];
+		set => Nodes[index] = value;
+	}
+
+	public PatrolNodeComponent Next( PatrolNodeComponent node )
+	{
+		return Nodes.First( x => x.Index == node.Index + 1 );
 	}
 
 	[Button( "Add Node", Icon = "language" )]
 	private void AddNode()
 	{
-		Path ??= new();
+		Nodes ??= new();
 
 		var nodeGO = Scene.CreateObject( true );
 		nodeGO.SetParent( GameObject );
 
 		var node = nodeGO.Components.Create<PatrolNodeComponent>();
 
-		if ( Path.Count <= 0 )
+		if ( Nodes.Count <= 0 )
 		{
+			nodeGO.Transform.Position = Transform.Position;
 			nodeGO.Name = string.Format( "Node: {0} - {1}", 0, GameObject.Id );
-			Path.Add( node );
+			Nodes.Add( node );
 			return;
 		}
 
-		var last = Path.Last();
-		node.Position = last.Position + Vector3.Forward * 32;
+		var last = Nodes.Last();
+		node.Transform.Position = last.Transform.Position + Vector3.Forward * 32;
 		node.Index = last.Index + 1;
 		nodeGO.Name = string.Format( "Node: {0} - {1}", node.Index, GameObject.Id );
-		Path.Add( node );
+		Nodes.Add( node );
 	}
 
 	[Button( "Remove Node", Icon = "close" )]
@@ -49,72 +58,69 @@ public sealed class PatrolPathComponent : Component
 		if ( IsEmpty )
 			return;
 
-		var index = Path.Count - 1;
-		Path.ElementAt( index ).GameObject.Destroy();
-		Path.RemoveAt( index );
+		var index = Nodes.Count - 1;
+		Nodes.ElementAt( index ).GameObject.Destroy();
+		Nodes.RemoveAt( index );
+	}
+
+	protected override Task OnLoad()
+	{
+		Nodes ??= new();
+		foreach ( var x in GameObject.Children )
+		{
+			if ( x.Components.TryGet<PatrolNodeComponent>( out var p ) )
+				Nodes.Add( p );
+		}
+
+		return Task.CompletedTask;
 	}
 
 	protected override void DrawGizmos()
 	{
+		IsBeingEdited = Gizmo.IsSelected;
+
+		if ( !IsBeingEdited )
+		{
+			using ( Gizmo.Scope( "main" ) )
+			{
+				Gizmo.Draw.Color = Color.Green;
+				Gizmo.Draw.SolidSphere( Vector3.Zero, 8 );
+				Gizmo.Draw.Color = Color.White;
+				Gizmo.Draw.WorldText( string.Format( "AI Path - {0}", GameObject.Name ), global::Transform.Zero.WithPosition( Vector3.Up * 32 ).WithRotation( GizmoUtils.FaceGizmoCamera ) );
+			}
+		}
+
 		if ( !Gizmo.IsSelected )
 			return;
 
 		if ( IsEmpty )
 			return;
 
+		for ( int i = 0; i < Nodes.Count; i++ )
 		{
-			var index = 0;
-			foreach ( var p in Path )
-			{
-				using ( Gizmo.Scope( index.ToString(), p.Position ) )
-				{
-					if ( index == 0 )
-					{
-						Gizmo.Draw.Color = Gizmo.Colors.Green;
-						Gizmo.Draw.LineSphere( Vector3.Zero, 16 );
-					}
-					else if ( index % 2 == 0 )
-					{
-						Gizmo.Draw.Color = Gizmo.Colors.Blue;
-						Gizmo.Draw.LineSphere( Vector3.Zero, 16 );
-					}
-					else
-					{
-						Gizmo.Draw.Color = Color.White;
-						Gizmo.Draw.LineSphere( Vector3.Zero, 16 );
-					}
-
-					Gizmo.Draw.Color = Color.White;
-					Gizmo.Draw.WorldText( $"Index: {p.Index}", new Transform().WithRotation( Rotation.LookAt( Gizmo.Camera.Rotation.Right, Gizmo.Camera.Rotation.Backward ) ) );
-
-					if ( Gizmo.Control.Position( "pTransform", p.Position, out var newP1 ) )
-					{
-						p.Position = newP1;
-					}
-				}
-
-				index++;
-			}
-		}
-
-		for ( int i = 0; i < Path.Count; i++ )
-		{
-			if ( i + 1 >= Path.Count )
+			if ( i + 1 >= Nodes.Count )
 				continue;
 
-			var p1 = Path[i];
-			var p2 = Path[i + 1];
+			var p1 = Nodes[i];
+			var p2 = Nodes[i + 1];
 
-			Gizmo.Draw.Line( p1.Position, p2.Position );
-
+			using ( Gizmo.Scope( i.ToString(), Scene.Transform.World ) )
+			{
+				Gizmo.Draw.Color = Color.Blue;
+				Gizmo.Draw.Arrow( p1.Transform.LocalPosition, p2.Transform.LocalPosition );
+			}
 		}
 
 		if ( IsLoop )
 		{
-			var first = Path[0];
-			var last = Path.Last();
+			var first = Nodes[0];
+			var last = Nodes.Last();
 
-			Gizmo.Draw.Line( first.Position, last.Position );
+			using ( Gizmo.Scope( "loopAround", Scene.Transform.World ) )
+			{
+				Gizmo.Draw.Color = Color.Green;
+				Gizmo.Draw.Arrow( last.Transform.LocalPosition, first.Transform.LocalPosition );
+			}
 		}
 	}
 }
