@@ -13,6 +13,7 @@ public sealed class GuardComponent : Component
 
 	/// <summary>
 	/// Have we reached the end and are we now traversing backwards to the start? 
+	/// Only applies to non-looping patrol paths.
 	/// </summary>
 	/// <value></value>
 	public bool IsReversing { get; private set; }
@@ -44,6 +45,7 @@ public sealed class GuardComponent : Component
 		}
 
 		WishVelocity = (CurrentNode.Transform.Position - Transform.Position).Normal * MoveSpeed;
+
 		if ( CharacterController.IsOnGround )
 		{
 			CharacterController.Velocity = CharacterController.Velocity.WithZ( 0 );
