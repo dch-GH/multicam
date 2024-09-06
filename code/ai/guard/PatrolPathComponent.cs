@@ -1,6 +1,7 @@
 
 namespace Ironsim.AI;
 
+[Category( "Ironsim/AI" )]
 public sealed class PatrolPathComponent : Component
 {
 	[Property] public List<PatrolNodeComponent> Nodes { get; private set; }
@@ -8,7 +9,6 @@ public sealed class PatrolPathComponent : Component
 	/// <summary>
 	/// Do we loop at the end?
 	/// </summary>
-	/// /// 
 	[Property] public bool IsLoop;
 
 	public bool IsBeingEdited { get; private set; }
@@ -24,7 +24,10 @@ public sealed class PatrolPathComponent : Component
 
 	public PatrolNodeComponent Next( PatrolNodeComponent node )
 	{
-		return Nodes.First( x => x.Index == node.Index + 1 );
+		if ( IsLoop && node.Index >= Count - 1 )
+			return Nodes[0];
+		else
+			return Nodes.First( x => x.Index == node.Index + 1 );
 	}
 
 	[Button( "Add Node", Icon = "language" )]
@@ -65,7 +68,10 @@ public sealed class PatrolPathComponent : Component
 
 	protected override Task OnLoad()
 	{
-		Nodes ??= new();
+		if ( Nodes is not null )
+			return Task.CompletedTask;
+
+		Nodes = new();
 		foreach ( var x in GameObject.Children )
 		{
 			if ( x.Components.TryGet<PatrolNodeComponent>( out var p ) )

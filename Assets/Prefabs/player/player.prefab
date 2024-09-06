@@ -48,15 +48,6 @@
         "RunMoveSpeed": 190,
         "SprintMoveSpeed": 320,
         "WalkMoveSpeed": 110
-      },
-      {
-        "__type": "Ironsim.Actor.TargetComponent",
-        "__guid": "e526fd2a-a3ff-44a2-ba21-8d7b29dd5424",
-        "Factions": "Player",
-        "PrimaryTargetPoint": {
-          "_type": "gameobject",
-          "go": "2c6d6454-6f08-4d43-858b-5eec6d4c4791"
-        }
       }
     ],
     "Children": [

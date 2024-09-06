@@ -7,7 +7,8 @@ namespace Ironsim.AI;
 public sealed class GuardComponent : Component
 {
 	[Property] private PatrolPathComponent? _patrol;
-	public bool ShouldPatrol { get; set; }
+	[Property] public bool ShouldPatrol { get; set; }
+	[Property, Range( 0, 500 )] public float MoveSpeed { get; set; }
 	public bool HasPatrolPath => !_patrol.IsEmpty;
 
 	/// <summary>
@@ -18,27 +19,47 @@ public sealed class GuardComponent : Component
 
 	private StateMachineComponent _stateMachine;
 	private NavMeshAgent _agent;
-	public PatrolNodeComponent Current;
+	private CharacterController CharacterController;
+	private Vector3 WishVelocity;
+	public PatrolNodeComponent CurrentNode;
+	public GameObject? Target;
 
 	protected override void OnStart()
 	{
 		if ( _patrol is not null )
-			Current = _patrol.Nodes.First();
+			CurrentNode = _patrol.Nodes.First();
 
 		Components.TryGet<NavMeshAgent>( out _agent );
+		Components.TryGet<CharacterController>( out CharacterController );
 	}
 
 	protected override void OnFixedUpdate()
 	{
 		if ( _patrol is not null && ShouldPatrol && HasPatrolPath )
 		{
-			if ( Transform.Position.AlmostEqual( Current.Transform.Position, 16 ) )
+			if ( Transform.Position.AlmostEqual( CurrentNode.Transform.Position, 32 ) )
 			{
-				Current.Visited = true;
-				Current = _patrol.Next( Current );
+				CurrentNode = _patrol.Next( CurrentNode );
 			}
 		}
 
-		_agent.MoveTo( Current.Transform.Position );
+		WishVelocity = (CurrentNode.Transform.Position - Transform.Position).Normal * MoveSpeed;
+		if ( CharacterController.IsOnGround )
+		{
+			CharacterController.Velocity = CharacterController.Velocity.WithZ( 0 );
+			CharacterController.Accelerate( WishVelocity );
+			CharacterController.ApplyFriction( 3.0f );
+		}
+
+		if ( !CharacterController.IsOnGround )
+		{
+			CharacterController.Velocity += Scene.PhysicsWorld.Gravity * Time.Delta;
+		}
+		else
+		{
+			CharacterController.Velocity = CharacterController.Velocity.WithZ( 0 );
+		}
+
+		CharacterController.Move();
 	}
 }
