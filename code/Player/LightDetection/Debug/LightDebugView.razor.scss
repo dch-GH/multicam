@@ -1,0 +1,50 @@
+LightDebugView {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 20px;
+    display: none;
+
+    &.enabled {
+        display: flex;
+    }
+
+    .title {
+        font-size: 25px;
+        font-family: Poppins;
+        color: #fff;
+    }
+
+    .texture {
+        border: 2px solid white;
+        background-color: red;
+        // min-width: 512px;
+        // min-height: 512px;
+        max-width: 512px;
+        max-height: 512px;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    .text {
+        font-size: 32px;
+        left: 0;
+        position: absolute;
+        color: white;
+        text-stroke: 3px black;
+
+        &.shadow {
+            color: green;
+        }
+
+        &.lit {
+            color: red;
+        }
+    }
+}

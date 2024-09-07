@@ -1,0 +1,70 @@
+{
+  "RootObject": {
+    "__guid": "52184a64-fc6d-4461-8fc1-ffca74646d90",
+    "Flags": 0,
+    "Name": "guard",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "69b3961d-96b5-495f-9900-f85120f2e756",
+        "Center": "0,0,25.80009",
+        "IsTrigger": false,
+        "Scale": "14.80001,16.00008,50",
+        "Static": false
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "bbc4a7e9-3ecc-4990-9531-a8bf9f2fb69f",
+        "Acceleration": 50,
+        "Height": 51.100136,
+        "MaxSpeed": 120,
+        "Radius": 10.69998,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": false
+      },
+      {
+        "__type": "Sandbox.CharacterController",
+        "__guid": "7ddcf36f-8ed4-4d9d-84ce-590034d34ea7",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 16,
+        "StepHeight": 18,
+        "UseCollisionRules": false
+      },
+      {
+        "__type": "Ironsim.AI.GuardComponent",
+        "__guid": "62e29b22-75dc-4db7-acb5-a371c88e06ba"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "c35feca4-5c22-4725-ad9a-13e14b3b04f1",
+        "Flags": 0,
+        "Name": "Cube",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "0276ec97-28be-4dd4-a197-b02ed842712e",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/citizen/skin/skeleton/models/skeleton_skin.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

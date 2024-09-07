@@ -1,0 +1,79 @@
+{
+  "PlayerDamageMultiplier": 1,
+  "EnemyDamageMultiplier": 1,
+  "FriendlyFire": false,
+  "FriendlyFireDamageMultiplier": 0.5,
+  "XpPlayerMultipliers": {
+    "1": 1
+  },
+  "ResistanceScalingCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "StrengthToStaminaCostMultiplierCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "StrengthToCarryWeightCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "StrengthToJumpHeightCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "StrengthToKnockBackCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "DexterityToStaminaRegenCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "DexterityToActionSpeedCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "DexterityToMoveSpeedCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "DexterityToStaminaRegenDelayCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "ConstitutionToMaxHealthCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "ConstitutionToHealthRegenCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "ConstitutionToHealMultiplierCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "ConstitutionToMaxStaminaCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "ConstitutionToHealthRegenDelayCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "PrimaryAttributeToPhysicalPowerCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "SpellCastingAttributeToSpellPowerCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "SpellCastingAttributeToSpellCastingSpeedCurve": {
+    "rangex": "0,0",
+    "rangey": "0,0"
+  },
+  "__references": [],
+  "__version": 0
+}

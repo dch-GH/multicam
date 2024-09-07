@@ -1,0 +1,106 @@
+{
+  "RootObject": {
+    "__guid": "2c6d6454-6f08-4d43-858b-5eec6d4c4791",
+    "Flags": 0,
+    "Name": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Ironsim.PlayerComponent",
+        "__guid": "daa13938-be35-4cb6-9777-1ef4d3ee5331"
+      },
+      {
+        "__type": "Ironsim.LightDetectorComponent",
+        "__guid": "36e07287-c883-4145-848e-fdde93d11224",
+        "_brightnessThreshold": 62,
+        "_debug": false,
+        "_lightPlanePrefab": "prefabs/player/lightplane.prefab",
+        "_offset": "0,0,14"
+      },
+      {
+        "__type": "Sandbox.CharacterController",
+        "__guid": "d00f411a-4c6f-4100-985b-ba30839a56ce",
+        "Acceleration": 32,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "trigger",
+        "Radius": 16,
+        "StepHeight": 18,
+        "UseCollisionRules": false
+      },
+      {
+        "__type": "PlayerController",
+        "__guid": "3a4d56a6-a095-43a4-a30d-e3bbbd0acef0",
+        "AnimationHelper": {
+          "_type": "component",
+          "component_id": "63b183ed-a090-4cab-97a3-6df45b8dfb9f",
+          "go": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
+          "component_type": "CitizenAnimationHelper"
+        },
+        "CharacterController": {
+          "_type": "component",
+          "component_id": "d00f411a-4c6f-4100-985b-ba30839a56ce",
+          "go": "2c6d6454-6f08-4d43-858b-5eec6d4c4791",
+          "component_type": "CharacterController"
+        },
+        "CrouchMoveSpeed": 64,
+        "RunMoveSpeed": 190,
+        "SprintMoveSpeed": 320,
+        "WalkMoveSpeed": 110
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
+        "Flags": 0,
+        "Name": "Body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "1441f58b-2c70-4682-af4f-23ad24e12c6e",
+            "BodyGroups": 341,
+            "CreateBoneObjects": false,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "ShadowsOnly",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          },
+          {
+            "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+            "__guid": "63b183ed-a090-4cab-97a3-6df45b8dfb9f",
+            "BodyWeight": 1,
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "LookAtEnabled": false,
+            "Target": {
+              "_type": "component",
+              "component_id": "1441f58b-2c70-4682-af4f-23ad24e12c6e",
+              "go": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
+              "component_type": "SkinnedModelRenderer"
+            }
+          },
+          {
+            "__type": "PlayerFootsteps",
+            "__guid": "037f0c43-20d5-4812-9da5-3e10edbf08d8",
+            "Source": {
+              "_type": "component",
+              "component_id": "1441f58b-2c70-4682-af4f-23ad24e12c6e",
+              "go": "d0a8e1e1-bce2-477a-908c-3cfc0ac57de8",
+              "component_type": "SkinnedModelRenderer"
+            }
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

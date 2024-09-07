@@ -1,16 +1,16 @@
 {
-  "Id": "7106c1ab-d17c-4ceb-98ae-b8bf53696a78",
+  "__guid": "7106c1ab-d17c-4ceb-98ae-b8bf53696a78",
   "GameObjects": [
     {
-      "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "Flags": 0,
       "Name": "Camera",
       "Position": "-590.291,-252.6827,81.16868",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "CameraComponent",
-          "__enabled": true,
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "ef8205b8-5e86-44f1-8c85-68c996d90c8d",
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 78,
@@ -26,18 +26,20 @@
           "ZNear": 1
         },
         {
-          "__version": 0,
-          "__type": "Tonemapping",
-          "__enabled": true,
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "1f4cc98d-43a1-4ef0-a437-a2c90bfba7c0",
+          "__version": 1,
+          "ExposureBias": 2,
           "ExposureCompensation": 0,
+          "ExposureMethod": "RGB",
           "MaximumExposure": 3,
           "MinimumExposure": 0,
+          "Mode": "Legacy",
           "Rate": 1
         },
         {
-          "__version": 0,
-          "__type": "Bloom",
-          "__enabled": true,
+          "__type": "Sandbox.Bloom",
+          "__guid": "8ba63e05-0760-46ff-b199-c42c46a4a26a",
           "BloomColor": {
             "color": [
               {
@@ -68,22 +70,19 @@
           "ThresholdWidth": 0.2
         },
         {
-          "__version": 0,
-          "__type": "Sharpen",
-          "__enabled": true,
+          "__type": "Sandbox.Sharpen",
+          "__guid": "03ee3e89-11d4-44b1-9228-7a45a6ffe1d0",
           "Scale": 0.2
         },
         {
-          "__version": 0,
-          "__type": "FilmGrain",
-          "__enabled": true,
+          "__type": "Sandbox.FilmGrain",
+          "__guid": "144f77fe-c770-4a2b-8a2a-dc03390635e2",
           "Intensity": 0.02,
           "Response": 2
         },
         {
-          "__version": 0,
-          "__type": "Vignette",
-          "__enabled": true,
+          "__type": "Sandbox.Vignette",
+          "__guid": "6715a101-9254-444e-93d3-f4bc24124fe6",
           "Center": "0.5,0.5",
           "Color": "0,0,0,1",
           "Intensity": 0.51,
@@ -93,182 +92,149 @@
       ]
     },
     {
-      "Id": "16a25c20-b8c5-436f-9cbd-27cebb20402c",
-      "Name": "Network System",
-      "Position": "-1089.84,230.1391,983.1465",
-      "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "NetworkHelper",
-          "__enabled": true,
-          "PlayerPrefab": "player.prefab",
-          "SpawnPoints": [],
-          "StartServer": true
-        }
-      ]
-    },
-    {
-      "Id": "b7aef46a-ea03-438e-bac7-4262baaadd08",
+      "__guid": "b7aef46a-ea03-438e-bac7-4262baaadd08",
+      "Flags": 0,
       "Name": "Ground",
       "Position": "0,0,-32",
       "Scale": "64,64,2",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "8d3b2607-6b2a-4735-b84d-263f608ef55e",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "Off",
           "Tint": "0.08495,0.12093,0.06412,1"
         },
         {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "54e07344-d986-433d-bec5-441208c12ce1",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "bda23bee-353f-41cf-b6bb-5d48f495362d",
+      "__guid": "bda23bee-353f-41cf-b6bb-5d48f495362d",
+      "Flags": 0,
       "Name": "Ground (1)",
       "Position": "-153.8619,-291.9857,128",
       "Scale": "5,5,5",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "1aa0edc4-3a8e-4ad9-b885-a0ce1a3d7e75",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "6816ec62-ec4e-4a60-9aa9-146525e33858",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "66202db1-e2c6-4a72-85b5-792599fa364b",
+      "__guid": "66202db1-e2c6-4a72-85b5-792599fa364b",
+      "Flags": 0,
       "Name": "Ground (2)",
       "Position": "-320,438.6776,64",
       "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "d054cfb2-a454-44af-8bc6-033d7eb9f6d6",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "7aaadc36-f33a-4935-b797-2dc0fc0029de",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "e1fe7eb5-f09b-4941-80a6-4bfd12781212",
+      "__guid": "e1fe7eb5-f09b-4941-80a6-4bfd12781212",
+      "Flags": 0,
       "Name": "Ground (3)",
       "Position": "-160,438.6776,56.96514",
       "Scale": "2,2,2",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b60bbeb1-ac8a-4751-ac90-94a03187ee13",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "2cee7a69-8b30-476e-9bc4-37ff998b4b14",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "592b5f80-b3a3-4948-a3d7-fbed1999aee6",
+      "__guid": "592b5f80-b3a3-4948-a3d7-fbed1999aee6",
+      "Flags": 0,
       "Name": "Ground (4)",
       "Position": "-307.9427,281.1965,32",
       "Scale": "2,2,1",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "30b8ee79-6ace-45b2-ba6b-3b6096d3565b",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
         },
         {
-          "__version": 0,
-          "__type": "BoxCollider",
-          "__enabled": true,
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "d1fc3662-090b-41f1-8256-5cebabaf2a2f",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
         }
       ]
     },
     {
-      "Id": "7d5cd424-898b-4bf8-81ca-bdecc22f9d01",
+      "__guid": "7d5cd424-898b-4bf8-81ca-bdecc22f9d01",
+      "Flags": 0,
       "Name": "Sun",
       "Position": "-1029.572,91.02805,479.9917",
       "Rotation": "-0.1671239,0.586682,0.05715659,0.7903216",
+      "Tags": "light_directional,light",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "DirectionalLight",
-          "__enabled": true,
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "4022a31d-bc5c-4bdd-aa87-0e8f46a6d9b3",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
           "Shadows": true,
           "SkyColor": "0.14564,0.2594,0.31628,1"
@@ -276,276 +242,185 @@
       ]
     },
     {
-      "Id": "b08e3147-bcd8-4f64-a7ba-9f8487388689",
+      "__guid": "b08e3147-bcd8-4f64-a7ba-9f8487388689",
+      "Flags": 0,
       "Name": "Object",
       "Position": "-624.348,0,26.00325",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "SpawnPoint",
-          "__enabled": true,
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "2d556dd1-0103-4b45-aaa3-e7f0764de555",
           "Color": "0.8902,0.31765,0.05098,1"
         }
       ]
     },
     {
-      "Id": "90c3d9dd-f178-4b16-a0a9-77ec664f8d92",
+      "__guid": "90c3d9dd-f178-4b16-a0a9-77ec664f8d92",
+      "Flags": 0,
       "Name": "Pusher",
       "Position": "-407.935,16.2766,44.87333",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "7029bb31-f73f-43b1-950a-af8b1bc8b202",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/sphere.vmdl",
           "RenderType": "On",
           "Tint": "0.19072,0.26816,0.70698,0.39"
         },
         {
-          "__version": 0,
           "__type": "PlayerPusher",
-          "__enabled": true,
+          "__guid": "b6c1299d-d96b-4b8d-9078-2a841da2e456",
           "Radius": 100
         }
       ]
     },
     {
-      "Id": "d48187ec-1582-4bd2-a1b5-c63203580527",
+      "__guid": "d48187ec-1582-4bd2-a1b5-c63203580527",
+      "Flags": 0,
       "Name": "Pusher (1)",
       "Position": "-407.935,-158.8519,44.87333",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "853da94c-e482-4590-afce-c4de7b102597",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/sphere.vmdl",
           "RenderType": "On",
           "Tint": "0.19072,0.26816,0.70698,0.39"
         },
         {
-          "__version": 0,
           "__type": "PlayerPusher",
-          "__enabled": true,
+          "__guid": "2fd24db5-1af2-439e-9e81-36b32f56e953",
           "Radius": 40
         }
       ]
     },
     {
-      "Id": "e4db46b6-641f-4f02-83ee-ca612812cc08",
+      "__guid": "e4db46b6-641f-4f02-83ee-ca612812cc08",
+      "Flags": 0,
       "Name": "Pusher (2)",
       "Position": "-396.6403,-91.29665,44.87325",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c4314047-4219-4c73-8cba-d2113e21c13a",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/sphere.vmdl",
           "RenderType": "On",
           "Tint": "0.19072,0.26816,0.70698,0.39"
         },
         {
-          "__version": 0,
           "__type": "PlayerPusher",
-          "__enabled": true,
+          "__guid": "37f4e834-1ec1-4cc3-af97-6cf0791cff53",
           "Radius": 40
         }
       ]
     },
     {
-      "Id": "5abfb7be-b099-4997-91ec-194c3b39b447",
+      "__guid": "5abfb7be-b099-4997-91ec-194c3b39b447",
+      "Flags": 0,
       "Name": "Pusher (3)",
       "Position": "-328.586,-149.8321,44.87333",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "3af95569-99f2-4677-9f8a-25e02bd99fcc",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/sphere.vmdl",
           "RenderType": "On",
           "Tint": "0.19072,0.26816,0.70698,0.39"
         },
         {
-          "__version": 0,
           "__type": "PlayerPusher",
-          "__enabled": true,
+          "__guid": "d50c5d85-8acc-4799-a32d-e27d3972cb38",
           "Radius": 40
         }
       ]
     },
     {
-      "Id": "db027ec4-7662-4469-91dd-8d9aa059ba14",
+      "__guid": "db027ec4-7662-4469-91dd-8d9aa059ba14",
+      "Flags": 0,
       "Name": "Pusher (4)",
       "Position": "-283.1933,-35.23642,53.73422",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "67ad937e-c257-4d9b-80e0-c274c7435015",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/sphere.vmdl",
           "RenderType": "On",
           "Tint": "0.19072,0.26816,0.70698,0.39"
         },
         {
-          "__version": 0,
           "__type": "PlayerPusher",
-          "__enabled": true,
+          "__guid": "964af969-8387-4d63-868a-f54509db31fd",
           "Radius": 40
         }
       ]
     },
     {
-      "Id": "96b97555-53be-4b2e-a9e2-b08c0b646bc7",
+      "__guid": "96b97555-53be-4b2e-a9e2-b08c0b646bc7",
+      "Flags": 0,
       "Name": "Pusher (5)",
       "Position": "-159.9507,441.1574,115.6509",
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
-          "__type": "ModelRenderer",
-          "__enabled": true,
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ed613939-41e8-4e1d-9cb8-a5e230042a46",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/sphere.vmdl",
           "RenderType": "On",
           "Tint": "0.19072,0.26816,0.70698,0.39"
         },
         {
-          "__version": 0,
           "__type": "PlayerPusher",
-          "__enabled": true,
+          "__guid": "ff8c54e7-7742-45af-b551-bb4ad2a1ea52",
           "Radius": 40
         }
       ]
     },
     {
-      "Id": "f3ba1b7a-e218-410e-8af2-ceafa3dd96c3",
+      "__guid": "902c8159-17b2-48f1-ac5d-fe7a8479d370",
+      "Flags": 0,
       "Name": "player",
-      "Position": "-590.291,-252.6827,17.1686",
+      "Position": "-539.8271,191.8786,22",
       "Enabled": true,
-      "Components": [
-        {
-          "__version": 0,
-          "__type": "CharacterController",
-          "__enabled": true,
-          "Acceleration": 32,
-          "GroundAngle": 45,
-          "Height": 64,
-          "IgnoreLayers": "trigger",
-          "Radius": 16,
-          "StepHeight": 18
-        }
-      ],
-      "Children": [
-        {
-          "Id": "3ecadfc4-ccc2-44ea-8ba8-83068e770bbb",
-          "Name": "Player Body",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "SkinnedModelRenderer",
-              "__enabled": true,
-              "BodyGroups": 341,
-              "BoneMergeTarget": null,
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen/citizen.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__version": 0,
-              "__type": "CitizenAnimationHelper",
-              "__enabled": true,
-              "BodyWeight": 1,
-              "EyeSource": null,
-              "EyesWeight": 1,
-              "HeadWeight": 1,
-              "Height": 1,
-              "IkLeftFoot": null,
-              "IkLeftHand": null,
-              "IkRightFoot": null,
-              "IkRightHand": null,
-              "LookAt": null,
-              "LookAtEnabled": false,
-              "Target": "3ecadfc4-ccc2-44ea-8ba8-83068e770bbb"
-            },
-            {
-              "__version": 0,
-              "__type": "PlayerFootsteps",
-              "__enabled": true,
-              "Source": "3ecadfc4-ccc2-44ea-8ba8-83068e770bbb"
-            }
-          ]
-        },
-        {
-          "Id": "be55728e-c12f-4739-8653-5b96be5a9d84",
-          "Name": "Physics Pusher",
-          "Position": "0,0,22.68671",
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "BoxCollider",
-              "__enabled": true,
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Scale": "36,36,40",
-              "Static": false,
-              "Surface": null
-            }
-          ]
-        },
-        {
-          "Id": "1f651e25-41b8-4cef-9d1a-5e140b253e5f",
-          "Name": "Pusher (6)",
-          "Position": "0,0,32",
-          "Enabled": true,
-          "Components": [
-            {
-              "__version": 0,
-              "__type": "PlayerPusher",
-              "__enabled": true,
-              "Radius": 32
-            }
-          ]
-        }
-      ]
+      "__Prefab": "prefabs/player.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
     "FixedUpdateFrequency": 50,
-    "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
     "ThreadedAnimation": true,
     "TimeScale": 1,
-    "UseFixedUpdate": true
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
   },
   "Title": "minimal",
   "Description": "",
-  "__references": []
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
 }

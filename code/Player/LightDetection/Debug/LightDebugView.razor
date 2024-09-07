@@ -1,0 +1,15 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="texture" @ref=Image></div>
+	<div class="text @(InShadow ? "shadow" : "lit")">@($"In Shadow: {InShadow}")</div>
+</root>
+
+@code
+{
+	public Panel Image;
+	public bool InShadow;
+	protected override int BuildHash() => System.HashCode.Combine( InShadow );
+}

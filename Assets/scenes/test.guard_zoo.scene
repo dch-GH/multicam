@@ -1,0 +1,898 @@
+{
+  "__guid": "7106c1ab-d17c-4ceb-98ae-b8bf53696a78",
+  "GameObjects": [
+    {
+      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "1206.468,-103.4652,1041.78",
+      "Rotation": "-0.1174543,0.03891734,0.9419548,0.3121076",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "d3e929e2-6c1f-48f2-94ff-dfa7125d2444",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 16,
+          "RenderExcludeTags": "light_plane",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 20000,
+          "ZNear": 0.5
+        },
+        {
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "bb1d4e00-68b9-4153-b1ed-499d0521de51",
+          "__version": 1,
+          "ExposureBias": 2,
+          "ExposureCompensation": 0,
+          "ExposureMethod": "RGB",
+          "MaximumExposure": 3,
+          "MinimumExposure": 0,
+          "Mode": "Legacy",
+          "Rate": 1
+        },
+        {
+          "__type": "Sandbox.Bloom",
+          "__guid": "308d42e8-ef37-47c1-bd44-af456b34ba64",
+          "BloomColor": {
+            "color": [
+              {
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 1,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "BloomCurve": [
+            {
+              "in": -1.6799997,
+              "out": 1.6799997
+            },
+            {
+              "x": 1,
+              "y": 1,
+              "in": -0.57142836,
+              "out": 0.57142836
+            }
+          ],
+          "Mode": "Additive",
+          "Strength": 0.2,
+          "Threshold": 0.2,
+          "ThresholdWidth": 0.2
+        },
+        {
+          "__type": "Sandbox.Sharpen",
+          "__guid": "a64a147a-7026-4ebe-a60a-2fd89d4f951e",
+          "Scale": 0.2
+        },
+        {
+          "__type": "Sandbox.FilmGrain",
+          "__guid": "bc63d400-9d11-46d7-9834-bb724569292a",
+          "Intensity": 0.02,
+          "Response": 2
+        },
+        {
+          "__type": "Sandbox.Vignette",
+          "__guid": "f8959bfb-3630-4b42-81be-def4d1d6a301",
+          "Center": "0.5,0.5",
+          "Color": "0,0,0,1",
+          "Intensity": 0.51,
+          "Roundness": 0,
+          "Smoothness": 1
+        }
+      ]
+    },
+    {
+      "__guid": "16a25c20-b8c5-436f-9cbd-27cebb20402c",
+      "Flags": 0,
+      "Name": "Network System",
+      "Position": "94.18904,-512.8152,99.53366",
+      "Rotation": "0,0,-0.7071069,-0.7071066",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.NetworkHelper",
+          "__guid": "abcadfe2-ecd9-4238-88fa-f38ca1198944",
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player/player.prefab"
+          },
+          "SpawnPoints": [
+            {
+              "_type": "gameobject",
+              "go": "16a25c20-b8c5-436f-9cbd-27cebb20402c"
+            }
+          ],
+          "StartServer": true
+        }
+      ]
+    },
+    {
+      "__guid": "66cee047-c868-48ac-a5c2-ec230a2274e3",
+      "Flags": 0,
+      "Name": "Screen",
+      "Position": "55.4256,-387.476,0",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "95f61551-065c-4412-8f96-a99621d0555d",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "ZIndex": 100
+        },
+        {
+          "__type": "LightDebugView",
+          "__guid": "aa8ffe9b-cf19-4bc8-93ef-445830384b7f"
+        }
+      ]
+    },
+    {
+      "__guid": "ffe1248b-0f4d-4879-95f9-fa0f016f6b1a",
+      "Flags": 0,
+      "Name": "Dynamic",
+      "Position": "-308.7452,-547.5107,0",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "a1633fc9-7736-4c39-a03b-2c08f4745fce",
+          "Flags": 0,
+          "Name": "MovingLight1",
+          "Position": "318.5786,203.8999,141.8291",
+          "Tags": "light_point,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.PointLight",
+              "__guid": "71026098-c860-44f6-81ed-f188c500b175",
+              "Attenuation": 0.73,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 135.29987,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "__guid": "711e2477-c099-4fd7-9b3b-d1aed77213f8",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "683.7075,0.08435059,-59.68982",
+          "Scale": "3.179714,2.066322,1",
+          "Tags": "shadow_volume",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "ae355767-4976-4179-8651-66c92dacc66d",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "bdbb8706-9a70-4587-8281-99d49a8430d2",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "116.0998,232.7,50",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "cabaff39-30ce-4d87-adb5-047b266e7d6f",
+          "Flags": 0,
+          "Name": "Spot Light",
+          "Position": "443.6115,0,127.0698",
+          "Rotation": "0,0.258819,0,0.9659258",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "1ee68fed-c4d7-4400-be83-7f5dfc6f2568",
+              "Attenuation": 0.29,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 500,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "__guid": "25b06ce4-fc07-461d-b2b7-2b4484cc060c",
+          "Flags": 0,
+          "Name": "Spot Light",
+          "Position": "-394.4549,0,329.5458",
+          "Rotation": "0,0.3826834,0,0.9238796",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "7f98507e-38cd-4c7c-a767-42d48191a3d4",
+              "Attenuation": 0.13,
+              "ConeInner": 46.03,
+              "ConeOuter": 59.83,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "Radius": 2240.3997,
+              "Shadows": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "25b26093-b09a-424d-b1bf-7418e4d6a80c",
+      "Flags": 0,
+      "Name": "TestLevel",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "39ffeb29-a2c0-459e-b116-e2f7cd4e6314",
+          "Flags": 0,
+          "Name": "Box",
+          "Position": "-305.3112,-693.8795,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.MeshComponent",
+              "__guid": "9b27573e-15e0-4c0b-b170-bacbba7a6521",
+              "Collision": "Mesh",
+              "Color": "1,1,1,1",
+              "HideInGame": false,
+              "IsTrigger": false,
+              "Mesh": {
+                "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+                "Positions": [
+                  "-973.5865,-1742.59,64",
+                  "973.5865,-1742.59,64",
+                  "973.5865,1742.59,64",
+                  "-973.5865,1742.59,64",
+                  "-973.5865,1742.59,-64",
+                  "973.5865,1742.59,-64",
+                  "973.5865,-1742.59,-64",
+                  "-973.5865,-1742.59,-64"
+                ],
+                "TextureCoord": [
+                  "7.606145,13.61399",
+                  "-7.606145,-0.5",
+                  "7.606145,-13.61399",
+                  "-13.61399,-0.5",
+                  "-7.606145,-13.61399",
+                  "-7.606145,-0.5",
+                  "-7.606145,13.61399",
+                  "-13.61399,-0.5",
+                  "7.606145,-13.61399",
+                  "7.606145,0.5",
+                  "7.606145,13.61399",
+                  "13.61399,0.5",
+                  "-7.606145,13.61399",
+                  "7.606145,0.5",
+                  "-7.606145,-13.61399",
+                  "13.61399,0.5",
+                  "13.61399,-0.5",
+                  "-7.606145,0.5",
+                  "-13.61399,0.5",
+                  "7.606145,-0.5",
+                  "-13.61399,0.5",
+                  "7.606145,-0.5",
+                  "13.61399,-0.5",
+                  "-7.606145,0.5"
+                ],
+                "TextureUAxis": [
+                  "1,0,0",
+                  "1,0,-0",
+                  "0,-1,0",
+                  "0,1,0",
+                  "-1,0,0",
+                  "1,-0,0"
+                ],
+                "TextureVAxis": [
+                  "0,-1,0",
+                  "0,-1,0",
+                  "0,0,-1",
+                  "-0,0,-1",
+                  "0,0,-1",
+                  "-0,0,-1"
+                ],
+                "TextureScale": [
+                  "0.25,0.2499999",
+                  "0.25,0.2499999",
+                  "0.2499999,0.25",
+                  "0.2499999,0.25",
+                  "0.25,0.25",
+                  "0.25,0.25"
+                ],
+                "TextureOffset": [
+                  "197.2446,296.481",
+                  "197.2446,296.4805",
+                  "296.4805,0",
+                  "215.5195,0",
+                  "314.7549,0",
+                  "197.2451,0"
+                ],
+                "MaterialIndex": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "EdgeFlags": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Materials": [
+                  "materials/dev/reflectivity_30.vmat"
+                ]
+              },
+              "SmoothingAngle": 40,
+              "Static": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "4c205884-485c-4181-9f21-4c09f3874ab1",
+      "Flags": 0,
+      "Name": "Box",
+      "Position": "-356.7158,-463.1862,128",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "59aaeeef-acde-4b6d-8281-e53ac3b84c62",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+            "Positions": [
+              "-67.29877,-80.80756,64",
+              "-37.04196,-80.80756,64",
+              "-37.04196,80.80756,64",
+              "-67.29877,80.80756,64",
+              "-67.29877,80.80756,-64",
+              "-37.04196,80.80756,-64",
+              "-37.04196,-80.80756,-64",
+              "-67.29877,-80.80756,-64"
+            ],
+            "TextureCoord": [
+              "-2.28939,4.631309",
+              "-2.525772,-8.5",
+              "-2.28939,3.368691",
+              "-3.631309,-8.5",
+              "-2.525772,3.368691",
+              "3.28939,-8.5",
+              "-2.525772,4.631309",
+              "3.368691,-8.5",
+              "-2.28939,3.368691",
+              "3.525772,-7.5",
+              "-2.28939,4.631309",
+              "-2.368691,-7.5",
+              "-2.525772,4.631309",
+              "-2.28939,-7.5",
+              "-2.525772,3.368691",
+              "4.631309,-7.5",
+              "4.631309,-8.5",
+              "-2.525772,-7.5",
+              "3.368691,-7.5",
+              "3.525772,-8.5",
+              "-3.631309,-7.5",
+              "-2.28939,-8.5",
+              "-2.368691,-8.5",
+              "3.28939,-7.5"
+            ],
+            "TextureUAxis": [
+              "1,0,0",
+              "1,0,-0",
+              "0,-1,0",
+              "0,1,0",
+              "-1,0,0",
+              "1,-0,0"
+            ],
+            "TextureVAxis": [
+              "0,-1,0",
+              "0,-1,0",
+              "0,0,-1",
+              "-0,0,-1",
+              "0,0,-1",
+              "-0,0,-1"
+            ],
+            "TextureScale": [
+              "0.2499993,0.2500001",
+              "0.2499993,0.2500001",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.2499993,0.25",
+              "0.2499993,0.25"
+            ],
+            "TextureOffset": [
+              "402.8679,195.2556",
+              "402.8679,195.2556",
+              "195.2554,0",
+              "316.7446,0",
+              "109.1321,0",
+              "402.8679,0"
+            ],
+            "MaterialIndex": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "eef5b34f-ba7b-4a0e-8205-f7cfab0e828d",
+      "Flags": 0,
+      "Name": "Box (1)",
+      "Position": "-356.7158,-689.0862,128",
+      "Rotation": "0,0,-0.3826834,0.9238796",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "23b781f6-76e3-42f3-9ae7-a258be9b310e",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+            "Positions": [
+              "-67.29877,-80.80756,64",
+              "-37.04196,-80.80756,64",
+              "-37.04196,80.80756,64",
+              "-67.29877,80.80756,64",
+              "-67.29877,80.80756,-64",
+              "-37.04196,80.80756,-64",
+              "-37.04196,-80.80756,-64",
+              "-67.29877,-80.80756,-64"
+            ],
+            "TextureCoord": [
+              "-2.28939,4.631309",
+              "-2.525772,-8.5",
+              "-2.28939,3.368691",
+              "-3.631309,-8.5",
+              "-2.525772,3.368691",
+              "3.28939,-8.5",
+              "-2.525772,4.631309",
+              "3.368691,-8.5",
+              "-2.28939,3.368691",
+              "3.525772,-7.5",
+              "-2.28939,4.631309",
+              "-2.368691,-7.5",
+              "-2.525772,4.631309",
+              "-2.28939,-7.5",
+              "-2.525772,3.368691",
+              "4.631309,-7.5",
+              "4.631309,-8.5",
+              "-2.525772,-7.5",
+              "3.368691,-7.5",
+              "3.525772,-8.5",
+              "-3.631309,-7.5",
+              "-2.28939,-8.5",
+              "-2.368691,-8.5",
+              "3.28939,-7.5"
+            ],
+            "TextureUAxis": [
+              "0.7071069,-0.7071066,0",
+              "0.7071069,-0.7071066,0",
+              "-0.7071067,-0.7071069,0",
+              "0.7071067,0.7071069,0",
+              "-0.7071073,0.7071063,0",
+              "0.7071073,-0.7071063,0"
+            ],
+            "TextureVAxis": [
+              "-0.7071063,-0.7071073,0",
+              "-0.7071063,-0.7071073,-0",
+              "0,0,-1",
+              "-0,0,-1",
+              "0,0,-1",
+              "0,0,-1"
+            ],
+            "TextureScale": [
+              "0.2499992,0.25",
+              "0.2499992,0.25",
+              "0.2500001,0.25",
+              "0.2500001,0.25",
+              "0.2499992,0.25",
+              "0.2499992,0.25"
+            ],
+            "TextureOffset": [
+              "83.91266,114.0249",
+              "83.9126,114.0249",
+              "114.0256,0",
+              "397.9744,0",
+              "428.0858,0",
+              "83.91455,0"
+            ],
+            "MaterialIndex": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true
+        }
+      ]
+    },
+    {
+      "__guid": "682698ec-d0f4-4b56-b6dd-4aa26f03c881",
+      "Flags": 0,
+      "Name": "guard",
+      "Position": "-5.678009,-395.2461,65",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "648a50d8-4b4a-431d-b693-5864549affe0",
+          "Center": "0,0,25.80009",
+          "IsTrigger": false,
+          "Scale": "14.80001,16.00008,50",
+          "Static": false
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "ae0f427b-9067-4e33-a2c2-f01f7797fdda",
+          "Acceleration": 20,
+          "Height": 51.100136,
+          "MaxSpeed": 50,
+          "Radius": 10.69998,
+          "Separation": 0.25,
+          "UpdatePosition": false,
+          "UpdateRotation": false
+        },
+        {
+          "__type": "Sandbox.CharacterController",
+          "__guid": "3ec3d661-f504-4348-b993-260bb23e7074",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18,
+          "UseCollisionRules": false
+        },
+        {
+          "__type": "Ironsim.AI.GuardComponent",
+          "__guid": "c9b60b56-7684-46a5-8e00-4666c767cb61",
+          "_patrol": {
+            "_type": "component",
+            "component_id": "8dffb91a-3f7f-4278-83e9-657c4ff9149b",
+            "go": "59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+            "component_type": "PatrolPathComponent"
+          },
+          "MoveSpeed": 64,
+          "ShouldPatrol": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "dbdf2596-9a87-4acf-a1b3-329667be6b40",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "23aa4ad8-7700-4c44-a240-cff2d47369b9",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/citizen/skin/skeleton/models/skeleton_skin.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+      "Flags": 0,
+      "Name": "Path",
+      "Position": "20.1515,-350.6235,80.78989",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Ironsim.AI.PatrolPathComponent",
+          "__guid": "8dffb91a-3f7f-4278-83e9-657c4ff9149b",
+          "IsLoop": true,
+          "Nodes": [
+            {
+              "_type": "component",
+              "component_id": "638a4fa2-2b8f-48d8-a8cb-6c46990c603f",
+              "go": "81c9ed7d-a00a-4e96-bd6b-e75c9164e64f",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "8d627a51-d733-438f-b4f3-e04979ce10d7",
+              "go": "c6143539-ea09-4ea6-b300-f40b8a5c55d7",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "ce5b6ef0-683c-4404-8daf-76fe50195b36",
+              "go": "25b7bfb0-0f18-43f7-a4fe-59ff8043d891",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "dc494ed6-2f16-4cef-bb98-4286ee7a329c",
+              "go": "14edc5eb-ab39-4b94-ac76-158cb629803c",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "27902e05-eed2-4137-b122-d8554e671c1e",
+              "go": "e2cf43cb-eb94-4834-9ad8-e0b43a349275",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "94646e08-fc4c-457d-8d76-5190d1825e27",
+              "go": "79a5fc5a-5798-4e63-aeef-dd295dc559f7",
+              "component_type": "PatrolNodeComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "d296993a-3b6b-4e18-b396-b61ecaedf05f",
+              "go": "aa947ddc-f8d8-4289-a6de-566d0d47f371",
+              "component_type": "PatrolNodeComponent"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "81c9ed7d-a00a-4e96-bd6b-e75c9164e64f",
+          "Flags": 0,
+          "Name": "Node: 0 - 59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "638a4fa2-2b8f-48d8-a8cb-6c46990c603f",
+              "Index": 0,
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "c6143539-ea09-4ea6-b300-f40b8a5c55d7",
+          "Flags": 0,
+          "Name": "Node: 1 - 59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+          "Position": "204.1296,-116.8156,0.0000006687017",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "8d627a51-d733-438f-b4f3-e04979ce10d7",
+              "Index": 1,
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "25b7bfb0-0f18-43f7-a4fe-59ff8043d891",
+          "Flags": 0,
+          "Name": "Node: 2 - 59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+          "Position": "74.18241,399.9298,0.00002160331",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "ce5b6ef0-683c-4404-8daf-76fe50195b36",
+              "Index": 2,
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "14edc5eb-ab39-4b94-ac76-158cb629803c",
+          "Flags": 0,
+          "Name": "Node: 3 - 59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+          "Position": "-266.0125,208.4632,-0.00007062468",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "dc494ed6-2f16-4cef-bb98-4286ee7a329c",
+              "Index": 3,
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "e2cf43cb-eb94-4834-9ad8-e0b43a349275",
+          "Flags": 0,
+          "Name": "Node: 4 - 59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+          "Position": "-577.0139,-22.62916,-0.0001599992",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "27902e05-eed2-4137-b122-d8554e671c1e",
+              "Index": 4,
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "79a5fc5a-5798-4e63-aeef-dd295dc559f7",
+          "Flags": 0,
+          "Name": "Node: 5 - 59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+          "Position": "-462.342,-503.4767,-0.0001552897",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "94646e08-fc4c-457d-8d76-5190d1825e27",
+              "Index": 5,
+              "Visited": false
+            }
+          ]
+        },
+        {
+          "__guid": "aa947ddc-f8d8-4289-a6de-566d0d47f371",
+          "Flags": 0,
+          "Name": "Node: 6 - 59e3dcc4-6287-4241-aac6-ce9fc5e01f87",
+          "Position": "-128.6232,-216.4336,-0.0001083263",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Ironsim.AI.PatrolNodeComponent",
+              "__guid": "d296993a-3b6b-4e18-b396-b61ecaedf05f",
+              "Index": 6,
+              "Visited": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "minimal",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
